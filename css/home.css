@@ -14,7 +14,7 @@ body
 a
 {
     text-decoration: none;
-    color: #333;
+    color: #F2F6F3;
 }
 li
 {
@@ -29,11 +29,13 @@ li
 }
 header
 {
-    background-color: #50b3a2;
+    background-color: #293036;
     color: #fff;
     padding: 20px 0;
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
 }
 .container
 {
@@ -41,19 +43,42 @@ header
     margin: auto;
     overflow: hidden;
 }
-.sidebar
-{
-    width: 10%;
-    background-color: #50b3a2;
-    color: #fff;
-    position: fixed;
-    
+
+.logo{
+    font-weight: 700; 
+    font-size: 22px;
 }
-/* footer
+
+.sidebar {
+  width: 10%;
+  height: 100vh;
+  background-color: #293036;
+  color: #fff;
+  
+
+  position: fixed; /* importante */
+  right: 0;        /* la porta a destra */
+  top: 0;          /* parte dall'alto */
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+
+
 {
-    background-color: #333;
+    background-color: #293036;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
-} */
+}
