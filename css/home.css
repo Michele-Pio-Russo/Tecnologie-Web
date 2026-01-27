@@ -32,7 +32,7 @@ li
 }
 .main-content {
     display: grid;
-    grid-template-columns: 1fr 20%;
+    grid-template-columns: 1fr auto;
     flex: 1;
     gap: 20px;
 }
@@ -58,7 +58,8 @@ li
   flex-direction: column;
   align-items: center;
   justify-content: center;
-} 
+  width: 100%;
+}
 
 .menu {
   display: flex;
@@ -66,8 +67,14 @@ li
   gap: 10px;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
+  width: 0;
   height: 100%;
+}
+.menu .menu-itme
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu a {
@@ -125,7 +132,7 @@ li
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    height: 10%;
+    height: 12%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,6 +145,15 @@ li
     white-space: nowrap;
     padding: 20px;
 }
+.footer img
+{
+width: 40px;
+height: 40px;
+}
+.footer img:hover
+{
+transform: scale(1.1);
+}
 .contacts
 {
     margin-top: 10px;
@@ -146,14 +162,22 @@ li
     justify-content: space-evenly;
     gap: 50px;
 }
+.contact
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .header
 {
+    display: flex;
     background-color: #390F61;
     color: #fff;
     padding: 20px 10px;
     height: 10%;
     align-items: center;
-    justify-items: left;
+    justify-content: space-between;
 }
 .image1
 { 
@@ -170,10 +194,16 @@ height: 150px;
 float: left;
 padding: 10px;
 border-radius: 25px;
-} 
-
-
-
+}
+.login-icon {
+    width: 40px;
+    height: 40px;   
+}
+.login-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    cursor: url(/imgs/Home/Footer/icons8-facebook-nuovo-100.png), auto;
+}
 @keyframes textFadeIn {
     from {
         width: 0;
@@ -193,4 +223,10 @@ border-radius: 25px;
     100% {
         background-position: 0% 50%;
     }
+}
+@keyframes apri {
+    to {
+        width: 100%;
+    }
+
 }
