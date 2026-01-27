@@ -1,13 +1,4 @@
-*
-/* {
-    background-color: #293036;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
-} */
+
 *
 {
     margin: 0;
@@ -20,6 +11,9 @@ body
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 a
 {
@@ -29,7 +23,7 @@ a
 li
 {
     list-style: none;
-    display: inline;
+    display: inline;    
     margin-right: 15px;
     padding: 20px;
     font-size: 18px;
@@ -38,12 +32,12 @@ li
     align-items: center;
 }
 .main-content {
-    margin-right: 10%;
-    padding: 20px;
-    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    flex: 1;
+    gap: 20px;
 }
 .footer p {
-    margin-right: 10%;
     padding: 20px;
 }
 .container
@@ -60,35 +54,99 @@ li
 }
 
 .sidebar {
-  width: 20%;
-  height: 100vh;
   background-color: #293036;
   color: #fff;
-  
-
-  position: fixed; /* importante */
-  right: 0;        /* la porta a destra */
-  top: 0;          /* parte dall'alto */
   padding: 30px;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
+  align-items: center;
+  justify-content: center;
+} 
 
 .menu {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.menu a {
+  display: block;
+  width: 100%;
   text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: clamp(12px, 2.5vw, 18px);
+  transition: background-color 0.3s ease, color 0.3s ease, border-radius 1s ease, font-size 1s ease;
+}
+
+.menu a:hover {
+  background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3, #FF0000);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border: 1px solid #fff;
+  animation: hoverEffect 3s ease-in-out infinite;
+  border-radius: 30px;
+  font-size: 30px;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 
-footer
+.footer
 {
     background-color: #293036;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer p
+{   
+    margin: 0;
+    animation: textFadeIn 2s linear infinite;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.header
+{
+    background-color: #293036;
+    color: #fff;
+    padding: 20px 10px;
+    height: 10%;
+    align-items: center;
+    justify-items: left;
+}
+
+@keyframes textFadeIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes hoverEffect {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
