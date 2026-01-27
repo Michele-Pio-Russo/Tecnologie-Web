@@ -118,6 +118,8 @@ li
 }
 .footer
 {
+    display: flex;
+    flex-direction: column;
     background-color: #390F61;
     box-shadow: 5px 5px 10px 2px #000000;
     color: #fff;
@@ -135,6 +137,14 @@ li
     overflow: hidden;
     white-space: nowrap;
     padding: 20px;
+}
+.contacts
+{
+    margin-top: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
 }
 .header
 {
