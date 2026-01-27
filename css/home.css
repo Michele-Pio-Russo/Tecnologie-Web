@@ -22,11 +22,10 @@ a
 }
 li
 {
-    list-style: none;
-    display: inline;    
-    margin-right: 15px;
-    padding: 20px;
-    font-size: 18px;
+    list-style: disc; 
+    margin-left: 15px;
+    padding: 3px;
+    font-size: 15px;
     font-weight: bold;
     justify-items: center;
     align-items: center;
@@ -99,6 +98,7 @@ li
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
+  display: inline-block;
 }
 
 
@@ -130,6 +130,18 @@ li
     align-items: center;
     justify-items: left;
 }
+.image1
+{ 
+width: 10px;
+height: 10px;
+float: right; 
+} 
+.image2
+{ 
+width: 10px;
+height: 10px;
+float: left; 
+} 
 
 @keyframes textFadeIn {
     from {
