@@ -1,12 +1,10 @@
-
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body
-{
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
     color: #333;
@@ -15,14 +13,14 @@ body
     flex-direction: column;
     min-height: 100vh;
 }
-a
-{
+
+a {
     text-decoration: none;
     color: #F2F6F3;
 }
-li
-{
-    list-style: disc; 
+
+li {
+    list-style: disc;
     margin-left: 15px;
     padding: 3px;
     font-size: 15px;
@@ -30,6 +28,7 @@ li
     justify-items: center;
     align-items: center;
 }
+
 .main-content {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -37,94 +36,134 @@ li
     gap: 20px;
 }
 
-.container
-{
+.container {
     width: 80%;
     margin: auto;
     overflow: hidden;
 }
 
-.logo{
+.logo {
     padding-left: 20px;
-    font-weight: 700; 
+    font-weight: 700;
     font-size: 22px;
 }
 
+.login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
+}
+
+/* --- INIZIO MODIFICHE SIDEBAR --- */
+
 .sidebar {
-  background-color: #440085;
-  color: linear-gradient(45deg, #390F61, #440085);
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+    background-color: #440085;
+    color: linear-gradient(45deg, #390F61, #440085);
+    padding: 30px 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    width: auto; 
+    min-width: 60px; /* Larghezza minima per vedere le icone/sidebar chiusa */
+}
+
+.sidebar:hover .menu {
+    width: 250px; 
+}
+.sidebar:hover .menu a {
+    opacity: 1;
 }
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 0;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+
+    width: 50; 
+    overflow: hidden; 
+    
+    transition: width 0.2s linear;
 }
-.menu .menu-itme
-{
+
+.menu .menu-itme {
+    padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%; /* Si adatta alla larghezza del menu */
+}
+
+.menu .menu-itme a {
+    opacity: 0; /* Usiamo opacity per l'animazione */
+}
+
+.menu .menu-itme img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    flex-shrink: 0; /* Impedisce all'icona di schiacciarsi */
 }
 
 .menu a {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  border-radius: 4px;
-  font-size: clamp(12px, 2.5vw, 18px);
-  transition: background-color 0.3s ease, color 0.3s ease, border-radius 1s ease, font-size 1s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: clamp(12px, 2.5vw, 18px);
+    opacity: 0; /* Invisibile all'inizio */
+
+    /* Transizione sincronizzata di 2 secondi anche per l'opacità */
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-radius 1s ease, 
+                font-size 1s ease,
+                opacity 2s linear; 
 }
 
 .menu a:hover {
-  background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3, #FF0000);
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  border: 1px solid #fff;
-  animation: hoverEffect 3s ease-in-out infinite;
-  border-radius: 30px;
-  font-size: 20px;
+    background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3, #FF0000);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border: 1px solid #fff;
+    animation: hoverEffect 3s ease-in-out infinite;
+    border-radius: 30px;
+    font-size: 20px;
+    opacity: 1 !important; /* Forza la visibilità all'hover del link */
 }
 
 .content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  display: inline-block;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
 }
-.content p{
+
+.content p {
     width: 30%;
 }
-.element1{
+
+.element1 {
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: space-between;
     flex-direction: row-reverse;
-    gap: 900px;
 }
 
-.element2{
+.element2 {
     display: flex;
     align-items: center;
-    justify-items: space-between;
-    gap: 900px;
-
+    justify-content: space-between;
 }
-.footer
-{
+
+.footer {
     display: flex;
     flex-direction: column;
     background-color: #390F61;
@@ -133,44 +172,43 @@ li
     text-align: center;
     padding: 10px 0;
     height: 12%;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
-.footer p
-{   
+
+.footer p {
     margin: 0;
     animation: textFadeIn 5s linear forwards;
     overflow: hidden;
     white-space: nowrap;
     padding: 20px;
 }
-.footer img
-{
-width: 40px;
-height: 40px;
+
+.footer img {
+    width: 40px;
+    height: 40px;
 }
-.footer img:hover
-{
-transform: scale(1.1);
+
+.footer img:hover {
+    transform: scale(1.1);
 }
-.contacts
-{
+
+.contacts {
     margin-top: 10px;
     font-size: 14px;
     display: flex;
     justify-content: space-evenly;
     gap: 50px;
 }
-.contact
-{
+
+.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.header
-{
+
+.header {
     display: flex;
     background-color: #390F61;
     color: #fff;
@@ -179,37 +217,41 @@ transform: scale(1.1);
     align-items: center;
     justify-content: space-between;
 }
-.image1
-{ 
-width: 150px;
-height: 150px;
-float: right;
-padding: 10px;
-border-radius: 25px;
-} 
-.image2
-{ 
-width: 150px;
-height: 150px;
-float: left;
-padding: 10px;
-border-radius: 25px;
+
+.image1 {
+    width: 150px;
+    height: 150px;
+    float: right;
+    padding: 10px;
+    border-radius: 25px;
 }
+
+.image2 {
+    width: 150px;
+    height: 150px;
+    float: left;
+    padding: 10px;
+    border-radius: 25px;
+}
+
 .login-icon {
     width: 40px;
-    height: 40px;   
+    height: 40px;
 }
+
 .login-icon:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease;
-    cursor: url(/imgs/Home/Footer/icons8-facebook-nuovo-100.png), auto;
 }
+
 @keyframes textFadeIn {
     from {
         width: 0;
+        opacity: 0;
     }
     to {
         width: 100%;
+        opacity: 1;
     }
 }
 
@@ -223,10 +265,4 @@ border-radius: 25px;
     100% {
         background-position: 0% 50%;
     }
-}
-@keyframes apri {
-    to {
-        width: 100%;
-    }
-
 }
