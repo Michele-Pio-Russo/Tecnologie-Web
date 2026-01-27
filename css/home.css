@@ -54,8 +54,8 @@ li
 }
 
 .sidebar {
-  background-color: #293036;
-  color: #fff;
+  background-color: #440085;
+  color: linear-gradient(45deg, #390F61, #440085);
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -104,7 +104,8 @@ li
 
 .footer
 {
-    background-color: #293036;
+    background-color: #390F61;
+    box-shadow: 5px 5px 10px 2px #000000;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -122,7 +123,7 @@ li
 }
 .header
 {
-    background-color: #293036;
+    background-color: #390F61;
     color: #fff;
     padding: 20px 10px;
     height: 10%;
