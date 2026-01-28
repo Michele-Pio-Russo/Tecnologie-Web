@@ -193,7 +193,7 @@ li {
 }
 
 .menu a:hover {
-    background: linear-gradient(90deg,  #0000FF, #4B0082, #9400D3);
+    background: linear-gradient(90deg,  #ed93ff, #a150db, #d061ff);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
