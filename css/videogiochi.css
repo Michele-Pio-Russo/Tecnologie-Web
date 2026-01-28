@@ -58,6 +58,7 @@ li {
 /* --- INIZIO MODIFICHE SIDEBAR --- */
 
 .sidebar {
+    
     background-color: #440085;
     color: linear-gradient(45deg, #390F61, #440085);
     padding: 30px 10px; 
