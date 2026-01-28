@@ -171,7 +171,6 @@ li {
 
 .menu .menu-itme a {
     /* Mantengo le utility testuali del codice 2 per evitare rotture grafiche */
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     
