@@ -1,0 +1,355 @@
+/* ==============================
+   RESET GENERALE
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Imposta il box-sizing per tutti gli elementi */
+}
+
+/* ==============================
+   BODY
+   ============================== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E6E6EB;
+    color: #440085;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assicura che il body occupi almeno tutta l'altezza della finestra */
+}
+
+/* ==============================
+   LINK
+   ============================== */
+a {
+    text-decoration: none;
+    color: #F2F6F3;
+}
+
+/* ==============================
+   LISTE
+   ============================== */
+li {
+    list-style: disc;
+    margin-left: 15px;
+    padding: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+}
+
+/* ==============================
+   HEADER E NAV
+   ============================== */
+.header {
+    display: flex;
+    background-color: #390F61;
+    color: #fff;
+    padding: 20px 10px;
+    height: 10%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ==============================
+   LOGO
+   ============================== */
+.logo {
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+/* ==============================
+   LOGIN
+   ============================== */
+.login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
+}
+
+.login-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.login-icon:hover {
+    transform: scale(1.1);
+}
+
+/* ==============================
+   MAIN CONTENT
+   ============================== */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Contenuto principale + sidebar */
+    flex: 1;
+    gap: 20px;
+    background: linear-gradient(
+        to right,
+        transparent calc(100% - 250px),
+        #440085 calc(100% - 250px)
+    );
+}
+
+/* ==============================
+   CONTAINER
+   ============================== */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* ==============================
+   SIDEBAR
+   ============================== */
+.sidebar {
+    position: fixed;      /* Sidebar fissa */
+    right: 0;             /* Posizionata a destra */
+    top: 0;               /* Parte dall'alto */
+    height: 100vh;        /* Occupa tutta l'altezza */
+    width: 60px;          /* Larghezza minima */
+    min-width: 60px;
+    background-color: #440085;
+    color: #E6E6EB;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1000;        /* Sopra altri elementi */
+    transition: width 0.3s ease; /* Animazione larghezza */
+}
+
+/* Espansione al passaggio del mouse */
+.sidebar:hover {
+    width: 250px;
+}
+
+/* ==============================
+   MENU SIDEBAR
+   ============================== */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: width 0.2s linear;
+}
+
+.menu .menu-itme {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; /* Adatta alla larghezza del menu */
+}
+
+.menu .menu-itme a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0; /* Invisibile all'inizio */
+}
+
+.menu .menu-itme img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    flex-shrink: 0; /* Impedisce all'icona di schiacciarsi */
+}
+
+.menu a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: clamp(12px, 2.5vw, 18px);
+    opacity: 0; /* Invisibile inizialmente */
+    transition: 
+        background-color 0.3s ease, 
+        color 0.3s ease, 
+        border-radius 1s ease, 
+        font-size 1s ease,
+        opacity 2s linear; 
+}
+
+/* Hover sugli item della sidebar */
+.sidebar:hover .menu a {
+    opacity: 1;
+}
+
+.menu a:hover {
+    background: linear-gradient(90deg,  #0000FF, #4B0082, #9400D3);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border: 1px solid #E6E6EB;
+    animation: hoverEffect 3s ease-in-out infinite;
+    border-radius: 30px;
+    font-size: 20px;
+    opacity: 1 !important; /* Forza la visibilità all'hover */
+}
+
+/* ==============================
+   CONTENUTO PRINCIPALE
+   ============================== */
+.content {
+    background-color: #E6E6EB;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.content p {
+    width: 30%;
+}
+
+/* ==============================
+   ELEMENTI FLESSIBILI
+   ============================== */
+.element1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.element2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ==============================
+   SEZIONI CHIARE/SCURE
+   ============================== */
+.section {
+    padding: 50px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Sezione chiara */
+.section.light {
+    background-color: #E6E6EB; /* chiaro */
+    color: #390F61;               /* testo scuro */
+}
+
+/* Sezione scura */
+.section.dark {
+    background-color: #390F61; /* scuro */
+    color: #E6E6EB;           /* testo chiaro */
+}
+
+/* Animazioni di transizione */
+.section {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #390F61;
+    box-shadow: 5px 5px 10px 2px #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    height: 12%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    margin: 0;
+    animation: textFadeIn 5s linear forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20px;
+}
+
+.footer img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.footer img:hover {
+    transform: scale(1.1);
+}
+
+/* ==============================
+   CONTATTI
+   ============================== */
+.contacts {
+    margin-top: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==============================
+   IMMAGINI
+   ============================== */
+.image1, .image2 {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.image1 { float: right; }
+.image2 { float: left; }
+
+/* ==============================
+   ANIMAZIONI
+   ============================== */
+@keyframes textFadeIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes hoverEffect {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
