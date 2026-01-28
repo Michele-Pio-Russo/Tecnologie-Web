@@ -1,9 +1,15 @@
+/* ==============================
+   RESET GENERALE
+   ============================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ==============================
+   BODY
+   ============================== */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
@@ -14,11 +20,17 @@ body {
     min-height: 100vh;
 }
 
+/* ==============================
+   LINK
+   ============================== */
 a {
     text-decoration: none;
     color: #F2F6F3;
 }
 
+/* ==============================
+   LISTE
+   ============================== */
 li {
     list-style: disc;
     margin-left: 15px;
@@ -29,25 +41,38 @@ li {
     align-items: center;
 }
 
+/* ==============================
+   MAIN CONTENT
+   ============================== */
 .main-content {
     display: grid;
     grid-template-columns: 1fr auto;
     flex: 1;
     gap: 20px;
+    align-items: start;
 }
 
+/* ==============================
+   CONTAINER
+   ============================== */
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
 }
 
+/* ==============================
+   LOGO
+   ============================== */
 .logo {
     padding-left: 20px;
     font-weight: 700;
     font-size: 22px;
 }
 
+/* ==============================
+   LOGIN
+   ============================== */
 .login {
     display: flex;
     align-items: center;
@@ -55,39 +80,49 @@ li {
     padding-right: 20px;
 }
 
-/* --- INIZIO MODIFICHE SIDEBAR --- */
-
+/* ==============================
+   SIDEBAR
+   ============================== */
 .sidebar {
-    
     background-color: #440085;
     color: linear-gradient(45deg, #390F61, #440085);
-    padding: 30px 10px; 
+    padding: 30px 10px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; 
-    width: auto; 
-    min-width: 60px; /* Larghezza minima per vedere le icone/sidebar chiusa */
+    justify-content: space-around;
+
+    width: auto;
+    min-width: 60px;
+
+    position: sticky;
+    top: 0;
+
+    height: 100vh;
 }
 
 .sidebar:hover .menu {
-    width: 250px; 
+    width: 250px;
 }
+
 .sidebar:hover .menu a {
     opacity: 1;
 }
 
+/* ==============================
+   MENU SIDEBAR
+   ============================== */
 .menu {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     justify-content: space-evenly;
-    height: 100%;
 
-    width: 50; 
-    overflow: hidden; 
-    
+    width: 50px;
+    overflow: hidden;
+
     transition: width 0.2s linear;
 }
 
@@ -96,18 +131,18 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%; /* Si adatta alla larghezza del menu */
+    width: 100%;
 }
 
 .menu .menu-itme a {
-    opacity: 0; /* Usiamo opacity per l'animazione */
+    opacity: 0;
 }
 
 .menu .menu-itme img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
-    flex-shrink: 0; /* Impedisce all'icona di schiacciarsi */
+    flex-shrink: 0;
 }
 
 .menu a {
@@ -117,14 +152,13 @@ li {
     padding: 10px;
     border-radius: 4px;
     font-size: clamp(12px, 2.5vw, 18px);
-    opacity: 0; /* Invisibile all'inizio */
+    opacity: 0;
 
-    /* Transizione sincronizzata di 2 secondi anche per l'opacità */
-    transition: background-color 0.3s ease, 
-                color 0.3s ease, 
-                border-radius 1s ease, 
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-radius 1s ease,
                 font-size 1s ease,
-                opacity 2s linear; 
+                opacity 0.3s linear;
 }
 
 .menu a:hover {
@@ -137,9 +171,12 @@ li {
     animation: hoverEffect 3s ease-in-out infinite;
     border-radius: 30px;
     font-size: 20px;
-    opacity: 1 !important; /* Forza la visibilità all'hover del link */
+    opacity: 1 !important;
 }
 
+/* ==============================
+   CONTENUTO
+   ============================== */
 .content {
     background-color: #fff;
     padding: 20px;
@@ -165,6 +202,9 @@ li {
     justify-content: space-between;
 }
 
+/* ==============================
+   FOOTER
+   ============================== */
 .footer {
     display: flex;
     flex-direction: column;
@@ -173,7 +213,6 @@ li {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    height: 12%;
     align-items: center;
     justify-content: center;
 }
@@ -195,6 +234,9 @@ li {
     transform: scale(1.1);
 }
 
+/* ==============================
+   CONTATTI
+   ============================== */
 .contacts {
     margin-top: 10px;
     font-size: 14px;
@@ -210,28 +252,22 @@ li {
     justify-content: center;
 }
 
+/* ==============================
+   HEADER E IMMAGINI
+   ============================== */
 .header {
     display: flex;
     background-color: #390F61;
     color: #fff;
     padding: 20px 10px;
-    height: 10%;
     align-items: center;
     justify-content: space-between;
 }
 
-.image1 {
-    width: 150px;
-    height: 150px;
-    float: right;
-    padding: 10px;
-    border-radius: 25px;
-}
-
+.image1,
 .image2 {
     width: 150px;
     height: 150px;
-    float: left;
     padding: 10px;
     border-radius: 25px;
 }
@@ -246,6 +282,9 @@ li {
     transition: transform 0.3s ease;
 }
 
+/* ==============================
+   ANIMAZIONI
+   ============================== */
 @keyframes textFadeIn {
     from {
         width: 0;
@@ -258,13 +297,7 @@ li {
 }
 
 @keyframes hoverEffect {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }

@@ -4,7 +4,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Imposta il box-sizing per tutti gli elementi */
+    box-sizing: border-box;
 }
 
 /* ==============================
@@ -18,7 +18,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Assicura che il body occupi almeno tutta l'altezza della finestra */
+    min-height: 100vh;
 }
 
 /* ==============================
@@ -89,7 +89,7 @@ li {
    ============================== */
 .main-content {
     display: grid;
-    grid-template-columns: 1fr auto; /* Contenuto principale + sidebar */
+    grid-template-columns: 1fr auto;
     flex: 1;
     gap: 20px;
     background: linear-gradient(
@@ -109,42 +109,53 @@ li {
 }
 
 /* ==============================
-   SIDEBAR
+   SIDEBAR (STRUTTURA DEL CODICE 1)
    ============================== */
 .sidebar {
-    position: fixed;      /* Sidebar fissa */
-    right: 0;             /* Posizionata a destra */
-    top: 0;               /* Parte dall'alto */
-    height: 100vh;        /* Occupa tutta l'altezza */
-    width: 60px;          /* Larghezza minima */
-    min-width: 60px;
-    background-color: #440085;
-    color: #E6E6EB;
+    /* Mantengo il colore del tema Code 2 */
+    background-color: #440085; 
+    color: #E6E6EB; 
+    
     padding: 30px 10px;
+
+    /* STRUTTURA DAL CODICE 1 (space-around invece di flex-start) */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    z-index: 1000;        /* Sopra altri elementi */
-    transition: width 0.3s ease; /* Animazione larghezza */
+    justify-content: space-around; 
+
+    /* DIMENSIONI DAL CODICE 1 */
+    width: auto;
+    min-width: 60px;
+
+    position: sticky;
+    top: 0;
+
+    height: 100vh;
+    z-index: 1000; /* Necessario per il layout 2 */
 }
 
-/* Espansione al passaggio del mouse */
-.sidebar:hover {
+.sidebar:hover .menu {
     width: 250px;
 }
 
+.sidebar:hover .menu a {
+    opacity: 1;
+}
+
 /* ==============================
-   MENU SIDEBAR
+   MENU SIDEBAR (STRUTTURA DEL CODICE 1)
    ============================== */
 .menu {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 100%;
-    width: 100%;
+    align-items: center;
+    /* STRUTTURA DAL CODICE 1 (space-evenly invece di flex-start) */
+    justify-content: space-evenly; 
+
+    /* DIMENSIONI DAL CODICE 1 */
+    width: 50px; 
     overflow: hidden;
     transition: width 0.2s linear;
 }
@@ -153,22 +164,25 @@ li {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%; /* Adatta alla larghezza del menu */
+    /* STRUTTURA DAL CODICE 1 (space-between invece di flex-start) */
+    justify-content: space-between;
+    width: 100%;
 }
 
 .menu .menu-itme a {
+    /* Mantengo le utility testuali del codice 2 per evitare rotture grafiche */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    opacity: 0; /* Invisibile all'inizio */
+    
+    opacity: 0;
 }
 
 .menu .menu-itme img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
-    flex-shrink: 0; /* Impedisce all'icona di schiacciarsi */
+    flex-shrink: 0;
 }
 
 .menu a {
@@ -178,21 +192,18 @@ li {
     padding: 10px;
     border-radius: 4px;
     font-size: clamp(12px, 2.5vw, 18px);
-    opacity: 0; /* Invisibile inizialmente */
+    opacity: 0;
+
     transition: 
         background-color 0.3s ease, 
         color 0.3s ease, 
         border-radius 1s ease, 
         font-size 1s ease,
-        opacity 2s linear; 
-}
-
-/* Hover sugli item della sidebar */
-.sidebar:hover .menu a {
-    opacity: 1;
+        opacity 0.3s linear; /* Opacity più veloce come nel Codice 1 */
 }
 
 .menu a:hover {
+    /* Mantengo il tema VIOLA del Codice 2 */
     background: linear-gradient(90deg,  #ed93ff, #a150db, #d061ff);
     background-size: 200% 100%;
     -webkit-background-clip: text;
@@ -202,7 +213,7 @@ li {
     animation: hoverEffect 3s ease-in-out infinite;
     border-radius: 30px;
     font-size: 20px;
-    opacity: 1 !important; /* Forza la visibilità all'hover */
+    opacity: 1 !important;
 }
 
 /* ==============================
@@ -244,24 +255,19 @@ li {
     box-sizing: border-box;
 }
 
-/* Sezione chiara */
 .section.light {
-    background-color: #E6E6EB; /* chiaro */
-    color: #390F61;               /* testo scuro */
+    background-color: #E6E6EB;
+    color: #390F61;
 }
 
-/* Sezione scura */
 .section.dark {
-    background-color: #390F61; /* scuro */
-    color: #E6E6EB;           /* testo chiaro */
+    background-color: #390F61;
+    color: #E6E6EB;
 }
 
-/* Animazioni di transizione */
 .section {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-
 
 /* ==============================
    FOOTER
@@ -343,13 +349,7 @@ li {
 }
 
 @keyframes hoverEffect {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
