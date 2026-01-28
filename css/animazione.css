@@ -148,19 +148,33 @@ li {
 }
 
 .content {
+    width: 100%;
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 5px;
-    display: inline-block;
+    display: flex;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+    flex-direction: column;
+    justify-content: center;
+    font-size: clamp(20px, calc(18px + 1vw), 25px);
+}
+.content h2 {
+    margin-top: 100px;   /* Crea spazio rispetto alla sezione precedente */
+    margin-bottom: 20px; /* Lascia un piccolo respiro prima del testo/immagine */
+    line-height: 1.2;
 }
 
+/* Eccezione: Il primissimo titolo non deve avere spazio sopra */
+.content h2:first-child {
+    margin-top: 0;
+}
 .content p {
-    width: 30%;
+    width: 50%;
 }
 
 .element1 {
     display: flex;
-    align-items: center;
+    align-items:flex-start;
     justify-content: space-between;
     flex-direction: row-reverse;
 }
@@ -168,8 +182,9 @@ li {
 .element2 {
     text-align: right;
     display: flex;
-    align-items: center;
+    align-items:flex-start;
     justify-content: space-between;
+    margin-bottom: px;
 }
 
 .footer {
@@ -250,10 +265,11 @@ li {
 
 .image1,
 .image2 {
-    width: clamp(30vh, 2.5vw, 100%);
+    width: clamp(100px, 25vw, 100%);
     height: auto;
     padding: 10px;
     border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Dà profondità */
 }
 
 .login-icon {
