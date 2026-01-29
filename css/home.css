@@ -27,6 +27,7 @@ li {
     font-weight: bold;
     justify-items: center;
     align-items: center;
+    text-align: left;
 }
 
 .main-content {
