@@ -72,10 +72,12 @@ li {
    ========================================= */
 .main-content {
     display: grid;
-    grid-template-columns: 1fr auto; /* Contenuto a sinistra, Sidebar a destra */
+    grid-template-columns: 1fr auto;
+    /* Contenuto a sinistra, Sidebar a destra */
     flex: 1;
     gap: 20px;
-    align-items: start; /* Necessario per lo sticky */
+    align-items: start;
+    /* Necessario per lo sticky */
 }
 
 /* =========================================
@@ -86,45 +88,54 @@ li {
     background-color: #fff;
     padding: 40px;
     border-radius: 5px;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
     /* Font size reattivo */
     font-size: clamp(20px, calc(18px + 1vw), 25px);
 }
 
 /* --- Titoli H2 --- */
 .content h2 {
-    margin-top: 100px;   /* Spazio abbondante sopra ogni nuova sezione */
-    margin-bottom: 20px; /* Piccolo spazio sotto il titolo */
+    margin-top: 100px;
+    /* Spazio abbondante sopra ogni nuova sezione */
+    margin-bottom: 20px;
+    /* Piccolo spazio sotto il titolo */
     line-height: 1.2;
 }
 
 .content h2:first-child {
-    margin-top: 0; /* Il primo titolo non ha bisogno di spazio sopra */
+    margin-top: 0;
+    /* Il primo titolo non ha bisogno di spazio sopra */
 }
 
 /* --- Paragrafi --- */
 .content p {
-    width: 50%; /* Larghezza colonna testo */
+    width: 50%;
+    /* Larghezza colonna testo */
 }
 
 /* --- Elementi (Blocchi Immagine + Testo) --- */
 .element1 {
     display: flex;
-    align-items: center; /* Centra verticalmente testo e immagine */
+    align-items: center;
+    /* Centra verticalmente testo e immagine */
     justify-content: space-between;
-    flex-direction: row-reverse; /* Immagine a DX, Testo a SX */
+    flex-direction: row-reverse;
+    /* Immagine a DX, Testo a SX */
 }
 
 .element2 {
     display: flex;
-    align-items: center; /* Centra verticalmente testo e immagine */
+    align-items: center;
+    /* Centra verticalmente testo e immagine */
     justify-content: space-between;
-    text-align: right;   /* Testo allineato a destra */
-    margin-bottom: 0;    /* Corretto errore (era 'px') */
+    text-align: right;
+    /* Testo allineato a destra */
+    margin-bottom: 0;
+    /* Corretto errore (era 'px') */
 }
 
 /* --- Immagini Articoli --- */
@@ -134,7 +145,8 @@ li {
     height: auto;
     padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
+    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.5);
+    /* Ombra per profondità */
 }
 
 /* =========================================
@@ -153,17 +165,20 @@ li {
     width: auto;
     min-width: 60px;
     height: 100vh;
-    
-    position: sticky; /* Sidebar fissa mentre scorri */
+
+    position: sticky;
+    /* Sidebar fissa mentre scorri */
     top: 0;
 }
 
 .sidebar:hover .menu {
-    width: 250px; /* Espansione menu */
+    width: 250px;
+    /* Espansione menu */
 }
 
 .sidebar:hover .menu a {
-    opacity: 1; /* Mostra testo link */
+    opacity: 1;
+    /* Mostra testo link */
 }
 
 /* --- Menu Container --- */
@@ -197,7 +212,8 @@ li {
 
 /* --- Menu Links (Testo) --- */
 .menu .menu-itme a {
-    opacity: 0; /* Nascosto di default */
+    opacity: 0;
+    /* Nascosto di default */
 }
 
 .menu a {
@@ -210,10 +226,10 @@ li {
     opacity: 0;
 
     transition: background-color 0.3s ease,
-                color 0.3s ease,
-                border-radius 1s ease,
-                font-size 1s ease,
-                opacity 0.3s linear;
+        color 0.3s ease,
+        border-radius 1s ease,
+        font-size 1s ease,
+        opacity 0.3s linear;
 }
 
 /* Hover sui Link (Effetto Arcobaleno) */
@@ -284,11 +300,25 @@ li {
 }
 
 /* Hover colori specifici Social */
-.whatsapp:hover a { color: #25D366; }
-.instagram:hover a { color: #E1306C; }
-.facebook:hover a { color: #1877F2; }
-.telegram:hover a { color: #24A1DE; }
-.discord:hover a { color: #5865F2; }
+.whatsapp:hover a {
+    color: #25D366;
+}
+
+.instagram:hover a {
+    color: #E1306C;
+}
+
+.facebook:hover a {
+    color: #1877F2;
+}
+
+.telegram:hover a {
+    color: #24A1DE;
+}
+
+.discord:hover a {
+    color: #5865F2;
+}
 
 /* =========================================
    7. ANIMAZIONI (KEYFRAMES)
@@ -298,6 +328,7 @@ li {
         width: 0;
         opacity: 0;
     }
+
     to {
         width: 100%;
         opacity: 1;
@@ -305,9 +336,17 @@ li {
 }
 
 @keyframes hoverEffect {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* =========================================
