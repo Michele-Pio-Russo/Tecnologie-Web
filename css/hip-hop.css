@@ -21,9 +21,34 @@ body {
     min-height: 100vh;
 }
 
-a {
-    text-decoration: none;
+
+/* Link normali nel contenuto */
+.content a{
+    color: #390F61 ; /* o il colore che vuoi */
+}
+
+.content a:hover {
+    color: #7185a8; /* o il colore che vuoi */
+}
+
+.content2 a {
+   color: #8F24F2; /* o il colore che vuoi */
+}
+
+.content2 a:hover {
+    color: #ff84ff; /* o il colore che vuoi */
+}
+
+/* Link nella sidebar */
+.sidebar a {
     color: #F2F6F3;
+    text-decoration: none;
+}
+
+/* Link nel footer */
+.footer a {
+    color: #F2F6F3;
+    text-decoration: none;
 }
 
 li {
@@ -34,6 +59,8 @@ li {
     font-weight: bold;
     justify-items: center;
     align-items: center;
+    text-align: left;
+
 }
 
 .sectionlight {
@@ -46,6 +73,19 @@ li {
     color: #F2F2F7;
 }
 
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+hr {
+    height: 7px;
+    margin: 50px;
+    color: #51025f;
+    background-color: #51025f;
+}
 /* =========================================
    2. HEADER
    ========================================= */
@@ -100,6 +140,9 @@ li {
     background-color: #E6E6EB;
     padding-right: 40px;
     padding-left: 20px;
+    gap: 40px; /* distanza tra blocchi */
+    border-radius: 5px;
+
 
     display: flex;
     flex-direction: column;
@@ -109,23 +152,34 @@ li {
 }
 
 .content2 {
+    width: 100%;
     background-color: #1E1B2E;
-    font-size: clamp(20px, 1.5vw, 40px);
+    padding: 40px 40px 20px 20px; /* più spazio in alto/basso */
+    gap: 40px; /* distanza tra blocchi */
+    border-radius: 5px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: clamp(20px, 1.7vw, 40px);
 }
 
+
 /* --- Titoli H2 --- */
-.content h2 {
+.content h2, .content2 h2 {
     margin-top: 100px;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
-.content h2:first-child {
+.content h2, .content2:first-child {
     margin-top: 0;
 }
 
 /* --- Paragrafi --- */
-.content p {
+.content p, .content2 p {
     width: 50%;
 }
 
@@ -146,13 +200,20 @@ li {
 }
 
 /* --- Immagini Articoli --- */
-.image1,
-.image2 {
+.image1 {
     width: clamp(100px, 25vw, 100%);
     height: auto;
     padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(1,1,1,0.5);
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
+}
+
+.image2 {
+    width: clamp(100px, 35vw, 100%);
+    height: auto;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
 }
 
 /* =========================================
@@ -171,17 +232,19 @@ li {
     width: auto;
     min-width: 60px;
     height: 100vh;
-    
+
     position: sticky; /* Sidebar fissa mentre scorri */
     top: 0;
 }
 
 .sidebar:hover .menu {
-    width: 250px; /* Espansione menu */
+    width: 250px;
+    /* Espansione menu */
 }
 
 .sidebar:hover .menu a {
-    opacity: 1; /* Mostra testo link */
+    opacity: 1;
+    /* Mostra testo link */
 }
 
 /* --- Menu Container --- */
@@ -215,7 +278,8 @@ li {
 
 /* --- Menu Links (Testo) --- */
 .menu .menu-itme a {
-    opacity: 0; /* Nascosto di default */
+    opacity: 0;
+    /* Nascosto di default */
 }
 
 .menu a {
@@ -228,10 +292,10 @@ li {
     opacity: 0;
 
     transition: background-color 0.3s ease,
-                color 0.3s ease,
-                border-radius 1s ease,
-                font-size 1s ease,
-                opacity 0.3s linear;
+        color 0.3s ease,
+        border-radius 1s ease,
+        font-size 1s ease,
+        opacity 0.3s linear;
 }
 
 /* Hover sui Link (Effetto Arcobaleno) */
@@ -303,24 +367,53 @@ li {
 }
 
 /* Hover colori specifici Social */
-.whatsapp:hover a { color: #25D366; }
-.instagram:hover a { color: #E1306C; }
-.facebook:hover a { color: #1877F2; }
-.telegram:hover a { color: #24A1DE; }
-.discord:hover a { color: #5865F2; }
+.whatsapp:hover a {
+    color: #25D366;
+}
+
+.instagram:hover a {
+    color: #E1306C;
+}
+
+.facebook:hover a {
+    color: #1877F2;
+}
+
+.telegram:hover a {
+    color: #24A1DE;
+}
+
+.discord:hover a {
+    color: #5865F2;
+}
 
 /* =========================================
    7. ANIMAZIONI (KEYFRAMES)
    ========================================= */
 @keyframes textFadeIn {
-    from { width: 0; opacity: 0; }
-    to { width: 100%; opacity: 1; }
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+    }
 }
 
 @keyframes hoverEffect {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* =========================================

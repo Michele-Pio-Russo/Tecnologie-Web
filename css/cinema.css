@@ -21,9 +21,37 @@ body {
     min-height: 100vh;
 }
 
-a {
-    text-decoration: none;
+/* Link normali nel contenuto */
+.content a{
+    color: #390F61 ; /* o il colore che vuoi */
+}
+
+.content a:hover {
+    color: #7185a8; /* o il colore che vuoi */
+}
+
+.content2 a {
+   color: #8F24F2; /* o il colore che vuoi */
+}
+
+.content2 a:hover {
+    color: #ff84ff; /* o il colore che vuoi */
+}
+
+/* Link nella sidebar */
+.sidebar a {
     color: #F2F6F3;
+    text-decoration: none;
+}
+
+/* Link nel footer */
+.footer a {
+    color: #F2F6F3;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8F24F2;
 }
 
 li {
@@ -34,6 +62,20 @@ li {
     font-weight: bold;
     justify-items: center;
     align-items: center;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+hr {
+    height: 7px;
+    margin: 50px;
+    color: #51025f;
+    background-color: #51025f;
 }
 
 .sectionlight {
@@ -100,12 +142,14 @@ li {
     background-color: #E6E6EB;
     padding-right: 40px;
     padding-left: 20px;
+    border-radius: 5px;
+
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    font-size: clamp(20px, calc(18px + 1vw), 25px);
+    font-size: clamp(20px, 1.7vw, 40px);
 }
 
 .content2 {
@@ -113,12 +157,14 @@ li {
     background-color: #1E1B2E;
     padding-right: 40px;
     padding-left: 20px;
+    border-radius: 5px;
+
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    font-size: clamp(20px, calc(18px + 1vw), 25px);
+    font-size: clamp(20px, 1.7vw, 40px);
 }
 
 /* --- Titoli H2 --- */
@@ -134,6 +180,23 @@ li {
 
 /* --- Paragrafi --- */
 .content p {
+    width: 50%;
+}
+
+
+/* --- Titoli H2 --- */
+.content2 h2 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.content2 h2:first-child {
+    margin-top: 0;
+}
+
+/* --- Paragrafi --- */
+.content2 p {
     width: 50%;
 }
 
@@ -154,13 +217,20 @@ li {
 }
 
 /* --- Immagini Articoli --- */
-.image1,
-.image2 {
+.image1 {
     width: clamp(100px, 25vw, 100%);
     height: auto;
     padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(1,1,1,0.5);
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
+}
+
+.image2 {
+    width: clamp(100px, 35vw, 100%);
+    height: auto;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
 }
 
 /* =========================================
