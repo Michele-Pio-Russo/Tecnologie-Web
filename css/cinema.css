@@ -13,14 +13,15 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3, #FF0000);
-    background-size: 200% 100%;
     color: #333;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: linear-gradient(270deg, #390F61, #440085, #8F24F2, #440085, #390F61);
+    background-size: 200% 100%;
     animation: hoverEffect 3s ease-in-out infinite;
+    /* background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3, #FF0000); */
 }
 
 /* Link normali nel contenuto */
@@ -410,4 +411,19 @@ hr {
     width: 80%;
     margin: auto;
     overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 12px;               /* Larghezza della barra verticale */
+  height: 12px;              /* Altezza della barra orizzontale */
+}
+
+/* Ora i tuoi stili verranno applicati */
+::-webkit-scrollbar-track {
+  background: #390F61; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8F24F2;
+  border-radius: 10px;
 }
