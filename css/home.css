@@ -1,3 +1,6 @@
+/* =========================================
+   1. RESET E IMPOSTAZIONI GLOBALI
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -28,20 +31,34 @@ li {
     justify-items: center;
     align-items: center;
     text-align: left;
+    font-size: clamp(20px, 1.7vw, 40px);
 }
 
-.main-content {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    flex: 1;
-    gap: 20px;
-    align-items: start; /* MODIFICA: necessario per sticky */
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+hr {
+    height: 7px;
+    margin: 50px;
+    color: #51025f;
+    background-color: #51025f;
+}
+
+/* =========================================
+   2. HEADER
+   ========================================= */
+.header {
+    display: flex;
+    background-color: #390F61;
+    color: #fff;
+    padding: 20px 10px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
@@ -57,8 +74,103 @@ li {
     padding-right: 20px;
 }
 
-/* --- SIDEBAR --- */
+.login-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
 
+.login-icon:hover {
+    transform: scale(1.1);
+}
+
+/* =========================================
+   3. LAYOUT PRINCIPALE (GRID)
+   ========================================= */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Contenuto a sinistra, Sidebar a destra */
+    flex: 1;
+    gap: 20px;
+    align-items: start; /* Necessario per lo sticky */
+}
+
+/* =========================================
+   4. CONTENUTO CENTRALE (ARTICOLI)
+   ========================================= */
+.content {
+    width: 100%;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    /* Font size reattivo */
+    font-size: clamp(20px, 1.7vw, 40px);
+}
+
+/* --- Titoli H2 --- */
+.content h2 {
+    margin-top: 100px;   /* Spazio abbondante sopra ogni nuova sezione */
+    margin-bottom: 20px; /* Piccolo spazio sotto il titolo */
+    line-height: 1.2;
+}
+
+.content h2:first-child {
+    margin-top: 0; /* Il primo titolo non ha bisogno di spazio sopra */
+}
+
+/* --- Paragrafi --- */
+.content p {
+    width: 50%; /* Larghezza colonna testo */
+}
+
+/* --- Elementi (Blocchi Immagine + Testo) --- */
+.element1 {
+    display: flex;
+    align-items: center; /* Centra verticalmente testo e immagine */
+    justify-content: space-between;
+    flex-direction: row-reverse; /* Immagine a DX, Testo a SX */
+}
+
+.element2 {
+    display: flex;
+    align-items: center; /* Centra verticalmente testo e immagine */
+    justify-content: space-between;
+    text-align: right;   /* Testo allineato a destra */
+    margin-bottom: 0;    /* Corretto errore (era 'px') */
+}
+
+.element3 {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* --- Immagini Articoli --- */
+.image1 {
+    width: clamp(100px, 25vw, 100%);
+    height: auto;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
+}
+
+.image2 {
+    width: clamp(100px, 35vw, 100%);
+    height: auto;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
+}
+
+/* =========================================
+   5. SIDEBAR E MENU
+   ========================================= */
 .sidebar {
     background-color: #440085;
     color: linear-gradient(45deg, #390F61, #440085);
@@ -71,22 +183,21 @@ li {
 
     width: auto;
     min-width: 60px;
-
-    position: sticky;
+    height: 100vh;
+    
+    position: sticky; /* Sidebar fissa mentre scorri */
     top: 0;
-
-    height: 100vh;        /* ← CHIAVE */
 }
 
-
 .sidebar:hover .menu {
-    width: 250px;
+    width: 250px; /* Espansione menu */
 }
 
 .sidebar:hover .menu a {
-    opacity: 1;
+    opacity: 1; /* Mostra testo link */
 }
 
+/* --- Menu Container --- */
 .menu {
     display: flex;
     flex-direction: column;
@@ -94,12 +205,12 @@ li {
     align-items: center;
     justify-content: space-evenly;
 
-    width: 50px; /* FIX: mancava px */
+    width: 50px;
     overflow: hidden;
-
     transition: width 0.2s linear;
 }
 
+/* --- Menu Items --- */
 .menu .menu-itme {
     padding: 10px;
     display: flex;
@@ -108,15 +219,16 @@ li {
     width: 100%;
 }
 
-.menu .menu-itme a {
-    opacity: 0;
-}
-
 .menu .menu-itme img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
     flex-shrink: 0;
+}
+
+/* --- Menu Links (Testo) --- */
+.menu .menu-itme a {
+    opacity: 0; /* Nascosto di default */
 }
 
 .menu a {
@@ -135,6 +247,7 @@ li {
                 opacity 0.3s linear;
 }
 
+/* Hover sui Link (Effetto Arcobaleno) */
 .menu a:hover {
     background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3, #FF0000);
     background-size: 200% 100%;
@@ -148,31 +261,9 @@ li {
     opacity: 1 !important;
 }
 
-.content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.content p {
-    width: 30%;
-}
-
-.element1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-}
-
-.element2 {
-    text-align: right;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
+/* =========================================
+   6. FOOTER
+   ========================================= */
 .footer {
     display: flex;
     flex-direction: column;
@@ -193,38 +284,7 @@ li {
     padding: 20px;
 }
 
-.footer img {
-    width: 40px;
-    height: 40px;
-}
-.footer a{
-
-    transition: color 0.5s ease-in-out;
-}
-.footer img:hover{
-    transform: scale(1.1);
-
-}
-.whatsapp:hover a{
-    color:#25D366;
-    transition: color 0.5s ease-in-out;
-}
-.instagram:hover a{
-    color:#E1306C;
-
-}
-.facebook:hover a{
-    color:#1877F2;
-
-}
-.telegram:hover a{
-    color:#24A1DE;
-
-}
-.discord:hover a{
-    color:#5865F2;
-
-}
+/* --- Contatti Social --- */
 .contacts {
     margin-top: 10px;
     font-size: 14px;
@@ -240,34 +300,30 @@ li {
     justify-content: center;
 }
 
-.header {
-    display: flex;
-    background-color: #390F61;
-    color: #fff;
-    padding: 20px 10px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.image1,
-.image2 {
-    width: clamp(30vh, 2.5vw, 100%);
-    height: auto;
-    padding: 10px;
-    border-radius: 25px;
-}
-
-.login-icon {
+.footer img {
     width: 40px;
     height: 40px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
-.login-icon:hover {
+.footer img:hover {
     transform: scale(1.1);
-    
 }
 
+.footer a {
+    transition: color 0.5s ease-in-out;
+}
+
+/* Hover colori specifici Social */
+.whatsapp:hover a { color: #25D366; }
+.instagram:hover a { color: #E1306C; }
+.facebook:hover a { color: #1877F2; }
+.telegram:hover a { color: #24A1DE; }
+.discord:hover a { color: #5865F2; }
+
+/* =========================================
+   7. ANIMAZIONI (KEYFRAMES)
+   ========================================= */
 @keyframes textFadeIn {
     from {
         width: 0;
@@ -283,4 +339,13 @@ li {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+/* =========================================
+   8. CLASSI DI UTILITÀ (CONTAINER)
+   ========================================= */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }

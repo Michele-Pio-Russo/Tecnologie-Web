@@ -108,7 +108,7 @@ hr {
     justify-content: center;
     
     /* Font size reattivo */
-    font-size: clamp(20px, calc(18px + 1vw), 25px);
+    font-size: clamp(20px, 1.7vw, 40px);
 }
 
 /* --- Titoli H2 --- */
@@ -151,9 +151,16 @@ hr {
 }
 
 /* --- Immagini Articoli --- */
-.image1,
-.image2 {
+.image1 {
     width: clamp(100px, 25vw, 100%);
+    height: auto;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
+}
+
+.image2 {
+    width: clamp(100px, 35vw, 100%);
     height: auto;
     padding: 10px;
     border-radius: 25px;

@@ -108,7 +108,7 @@ hr {
     justify-content: center;
     
     /* Font size reattivo */
-    font-size: clamp(20px, calc(18px + 1vw), 25px);
+    font-size: clamp(20px, 1.7vw, 40px);
 }
 
 /* --- Titoli H2 --- */
