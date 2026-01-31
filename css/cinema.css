@@ -25,8 +25,8 @@ body {
 }
 
 /* Link normali nel contenuto */
-.content a{
-    color: #5B6CFF ; 
+.content a {
+    color: #5B6CFF;
 }
 
 .content a:hover {
@@ -34,11 +34,11 @@ body {
 }
 
 .content2 a {
-   color: #7AA2FF;
+    color: #7AA2FF;
 }
 
 .content2 a:hover {
-    color: #AFC0FF; 
+    color: #AFC0FF;
 }
 
 /* Link nella sidebar */
@@ -125,6 +125,7 @@ hr {
 .login-icon:hover {
     transform: scale(1.1);
 }
+
 /* =========================================
    SPECIALE. TEMA CHIARO/SCURO
    ========================================= */
@@ -137,6 +138,7 @@ hr {
     width: 60px;
     height: 60px;
 }
+
 .theme-icon button {
     background: none;
     border: none;
@@ -144,6 +146,7 @@ hr {
     margin: 0;
     cursor: pointer;
 }
+
 .dark-mode .header {
     background-color: #222;
     color: #fff;
@@ -153,25 +156,29 @@ hr {
 .theme-icon img {
     cursor: pointer;
 }
+
 .theme-icon img:last-child {
     display: none;
 }
+
 .dark-mode .theme-icon img:first-child {
     display: none;
 }
+
 .dark-mode .theme-icon img:last-child {
     display: block;
 }
 
 .dark-mode {
-        background: linear-gradient(270deg, #5A2E0F, #7A3F16, #D96A1A, #7A3F16, #5A2E0F);
+    background: linear-gradient(270deg, #5A2E0F, #7A3F16, #D96A1A, #7A3F16, #5A2E0F);
 }
 
 .dark-mode body {
     background: linear-gradient(270deg, #5A2E0F, #7A3F16, #D96A1A, #7A3F16, #5A2E0F);
 }
-.dark-mode .content a{
-        color: #0F2A44 ; 
+
+.dark-mode .content a {
+    color: #0F2A44;
 }
 
 .dark-mode.content a:hover {
@@ -179,11 +186,11 @@ hr {
 }
 
 .dark-mode .content2 a {
-   color: #63CFC7;
+    color: #63CFC7;
 }
 
 .dark-mode .content2 a:hover {
-    color: #9BE5DE; 
+    color: #9BE5DE;
 }
 
 .dark-mode .sectionlight {
@@ -216,12 +223,12 @@ hr {
 }
 
 .dark-mode .content {
-        background-color: #EDE2DA;
+    background-color: #EDE2DA;
 
 }
 
 .dark-mode .content2 {
-        background-color: #2A160A;
+    background-color: #2A160A;
 }
 
 .dark-mode .sidebar {
@@ -234,10 +241,12 @@ hr {
    ========================================= */
 .main-content {
     display: grid;
-    grid-template-columns: 1fr auto; /* Contenuto a sinistra, Sidebar a destra */
+    grid-template-columns: 1fr auto;
+    /* Contenuto a sinistra, Sidebar a destra */
     flex: 1;
     gap: 20px;
-    align-items: start; /* Necessario per lo sticky */
+    align-items: start;
+    /* Necessario per lo sticky */
 }
 
 /* =========================================
@@ -248,8 +257,11 @@ hr {
     background-color: #E6E6EB;
     padding-right: 40px;
     padding-left: 20px;
-    border-radius: 5px;
 
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    border-radius: 5px;
 
     display: flex;
     flex-direction: column;
@@ -263,6 +275,10 @@ hr {
     background-color: #1E1B2E;
     padding-right: 40px;
     padding-left: 20px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
     border-radius: 5px;
 
 
@@ -328,7 +344,8 @@ hr {
     height: auto;
     padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
+    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.5);
+    /* Ombra per profondità */
 }
 
 .image2 {
@@ -336,7 +353,8 @@ hr {
     height: auto;
     padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
+    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.5);
+    /* Ombra per profondità */
 }
 
 /* =========================================
@@ -355,17 +373,20 @@ hr {
     width: auto;
     min-width: 60px;
     height: 100vh;
-    
-    position: sticky; /* Sidebar fissa mentre scorri */
+
+    position: sticky;
+    /* Sidebar fissa mentre scorri */
     top: 0;
 }
 
 .sidebar:hover .menu {
-    width: 250px; /* Espansione menu */
+    width: 250px;
+    /* Espansione menu */
 }
 
 .sidebar:hover .menu a {
-    opacity: 1; /* Mostra testo link */
+    opacity: 1;
+    /* Mostra testo link */
 }
 
 /* --- Menu Container --- */
@@ -399,7 +420,8 @@ hr {
 
 /* --- Menu Links (Testo) --- */
 .menu .menu-itme a {
-    opacity: 0; /* Nascosto di default */
+    opacity: 0;
+    /* Nascosto di default */
 }
 
 .menu a {
@@ -412,10 +434,10 @@ hr {
     opacity: 0;
 
     transition: background-color 0.3s ease,
-                color 0.3s ease,
-                border-radius 1s ease,
-                font-size 1s ease,
-                opacity 0.3s linear;
+        color 0.3s ease,
+        border-radius 1s ease,
+        font-size 1s ease,
+        opacity 0.3s linear;
 }
 
 /* Hover sui Link (Effetto Arcobaleno) */
@@ -487,24 +509,53 @@ hr {
 }
 
 /* Hover colori specifici Social */
-.whatsapp:hover a { color: #25D366; }
-.instagram:hover a { color: #E1306C; }
-.facebook:hover a { color: #1877F2; }
-.telegram:hover a { color: #24A1DE; }
-.discord:hover a { color: #5865F2; }
+.whatsapp:hover a {
+    color: #25D366;
+}
+
+.instagram:hover a {
+    color: #E1306C;
+}
+
+.facebook:hover a {
+    color: #1877F2;
+}
+
+.telegram:hover a {
+    color: #24A1DE;
+}
+
+.discord:hover a {
+    color: #5865F2;
+}
 
 /* =========================================
    7. ANIMAZIONI (KEYFRAMES)
    ========================================= */
 @keyframes textFadeIn {
-    from { width: 0; opacity: 0; }
-    to { width: 100%; opacity: 1; }
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+    }
 }
 
 @keyframes hoverEffect {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* =========================================
@@ -517,16 +568,18 @@ hr {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;               /* Larghezza della barra verticale */
-  height: 12px;              /* Altezza della barra orizzontale */
+    width: 12px;
+    /* Larghezza della barra verticale */
+    height: 12px;
+    /* Altezza della barra orizzontale */
 }
 
 /* Ora i tuoi stili verranno applicati */
 ::-webkit-scrollbar-track {
-  background: #390F61; 
+    background: #390F61;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #8F24F2;
-  border-radius: 10px;
+    background-color: #8F24F2;
+    border-radius: 10px;
 }
