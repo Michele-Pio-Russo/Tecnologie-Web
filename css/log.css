@@ -20,6 +20,90 @@ body
     min-height: 100vh;
     backdrop-filter: blur(30px);
 }
+
+
+
+/* =========================================
+   2. HEADER
+   ========================================= */
+.header {
+    width: clamp(100px, 35vw, 100%);
+    display: flex;
+    background-color: #390F61;
+    color: #fff;
+    padding: 20px 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    margin-bottom: 50px;
+}
+
+.logo {
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
+}
+
+.home-icon {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.home-icon:hover {
+    transform: scale(1.1);
+}
+/* =========================================
+   SPECIALE. TEMA CHIARO/SCURO
+   ========================================= */
+.theme-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #440085;
+    width: 60px;
+    height: 60px;
+}
+.theme-icon button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.dark-mode .header {
+    background-color: #222;
+    color: #fff;
+}
+
+
+.theme-icon img {
+    cursor: pointer;
+}
+.theme-icon img:last-child {
+    display: none;
+}
+.dark-mode .theme-icon img:first-child {
+    display: none;
+}
+.dark-mode .theme-icon img:last-child {
+    display: block;
+}
+
+
+/* =========================================
+   3. FORM DI LOGIN/REGISTRAZIONE
+   ========================================= */
+
+
 .login-form {
     color: white;
     text-align: center;
