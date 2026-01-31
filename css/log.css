@@ -5,7 +5,8 @@
 {
     --sfondo: url('../../imgs/Login/scuro.jpg');
     --colore-bottone:#440085;
-    --colore-link:#924fd1;
+    --colore-link:#8A95FF ;
+    --colore-link-hover:#E6E6EB;
     --colore-testo: white;
 }
 * {
@@ -160,8 +161,12 @@ form a
 button:hover {
     background-color: #390F61;
 }
+
+.dark-mode button:hover {
+    background-color: #b65f20;
+}
 form a:hover {
-    background-color:#ddd;
+    background-color: var(--colore-link-hover);
 }
 .question {
     margin-top: 10px;
@@ -191,6 +196,10 @@ form a:hover {
 .dark-mode
 {
     --sfondo: url('../../imgs/Login/chiaro.jpg');
+    --colore-bottone:#7A3F16;
+    --colore-link:#26998d ;
+    --colore-link-hover:#494949;
+    --colore-testo: white;
 }
 
 
