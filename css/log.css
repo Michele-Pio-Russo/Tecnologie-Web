@@ -8,6 +8,7 @@
     --colore-link:#8A95FF ;
     --colore-link-hover:#E6E6EB;
     --colore-testo: white;
+    --immagine-logo: url('/imgs/Logo/LogoViola.png');
 }
 * {
     margin: 0;
@@ -47,11 +48,26 @@ body
 }
 
 .logo {
+    height: 100%;
     padding-left: 20px;
     font-weight: 700;
     font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
-
+.immagine-logo
+{
+    background-image: var(--immagine-logo); /* Usa la variabile! */
+    width: clamp(50px, 6vw, 70px); 
+    height: clamp(50px, 6vw, 70px);  
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    /* transition: background-image 0.3s linear; */
+}
 .login {
     display: flex;
     align-items: center;
@@ -147,7 +163,7 @@ body
     font-size: clamp(20px, 1.7vw, 40px);
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom:10px
+    margin-bottom:15px
 }
 form a
 {
@@ -158,13 +174,10 @@ form a
     background: 2px solid transparent;
     border-radius: 25px;
 }
-button:hover {
+.login-form button:hover {
     background-color: #390F61;
 }
 
-.dark-mode button:hover {
-    background-color: #b65f20;
-}
 form a:hover {
     background-color: var(--colore-link-hover);
 }
@@ -181,7 +194,7 @@ form a:hover {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: #440085;
+    background-color: var(--colore-bottone);
     width: 60px;
     height: 60px;
 }
@@ -195,11 +208,16 @@ form a:hover {
 }
 .dark-mode
 {
+    --immagine-logo: url('/imgs/Logo/LogoArancione.png');
     --sfondo: url('../../imgs/Login/chiaro.jpg');
     --colore-bottone:#7A3F16;
     --colore-link:#26998d ;
     --colore-link-hover:#494949;
     --colore-testo: white;
+    --immagine-logo: url('../../imgs/Logo/LogoArancione.png');
+    .login-form button:hover {
+    background-color: #ad5b20;
+}
 }
 
 

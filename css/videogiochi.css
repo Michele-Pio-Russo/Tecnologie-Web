@@ -4,11 +4,13 @@
 :root {
     --scrollbar-track: #390F61;
     --scrollbar-thumb: #8F24F2;
+    --immagine-logo: url('/imgs/Logo/LogoViola.png');   
 }
 
 .dark-mode {
     --scrollbar-track: #5A2E0F;
     --scrollbar-thumb: #FF7F11;
+    --immagine-logo: url('/imgs/Logo/LogoArancione.png');
 }
    * {
     margin: 0;
@@ -71,11 +73,26 @@ hr {
 }
 
 .logo {
+    height: 100%;
     padding-left: 20px;
     font-weight: 700;
     font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
-
+.immagine-logo
+{
+    background-image: var(--immagine-logo); /* Usa la variabile! */
+    width: clamp(50px, 6vw, 70px); 
+    height: clamp(50px, 6vw, 70px);  
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    /* transition: background-image 0.3s linear; */
+}
 .login {
     display: flex;
     align-items: center;
