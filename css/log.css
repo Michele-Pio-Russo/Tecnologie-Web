@@ -1,0 +1,113 @@
+/* =========================================
+   1. RESET E IMPOSTAZIONI GLOBALI
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-size: clamp(16px, 1.2vw, 24px);
+    background: url('../../imgs/Login/scuro.jpg') no-repeat center center fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    backdrop-filter: blur(30px);
+}
+.login-form {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width: clamp(100px, 35vw, 100%);
+    height: auto;
+    background-color:transparent;
+
+    border: 1px solid #ccc;
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+/* Modifica questa sezione nel tuo file log.css */
+
+.input {
+    position: relative; /* FONDAMENTALE: permette all'icona di posizionarsi rispetto a questo div */
+    margin-bottom: 15px;
+    width: 100%;
+    height: clamp(40px, 6vh, 80px); /* Aumentato leggermente per visibilità */
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.input input {
+    color:white;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding-left: 20px;     /* Spazio a sinistra per il testo */
+    padding-right: 50px;    /* Spazio a destra per non coprire l'icona */
+    font-size: clamp(16px, 1.2vw, 24px);
+    background: transparent;
+}
+
+.input img {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(20px, 1.7vw, 35px);
+    height: auto;
+    
+    pointer-events: none; /* Permette di cliccare attraverso l'icona */
+}
+.input ::placeholder {
+    font-size: clamp(20px, 1.7vw, 40px);
+    padding-left: 10px;
+    color: white;
+}
+button {
+    width: 100%;
+    height: clamp(40px, 6vh, 80px);
+    border: none;
+    border-radius: 25px;
+    background-color: #440085;
+    color: white;
+    font-size: clamp(20px, 1.7vw, 40px);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom:10px
+}
+form a
+{
+    text-decoration: none;
+    color: #924fd1;
+    font-weight: bold;
+    padding: 5px 10px;
+    background: 2px solid transparent;
+    border-radius: 25px;
+}
+button:hover {
+    background-color: #390F61;
+}
+form a:hover {
+    background-color:#ddd;
+}
+.question {
+    margin-top: 10px;
+}
