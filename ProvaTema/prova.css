@@ -13,32 +13,32 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(270deg, #5A2E0F, #7A3F16, #D96A1A, #7A3F16,     #5A2E0F);
+    background-size: 200% 100%;
+    animation: hoverEffect 3s ease-in-out infinite;
     color: #333;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(270deg, #390F61, #440085, #8F24F2, #440085, #390F61);
-    background-size: 200% 100%;
-    animation: hoverEffect 3s ease-in-out infinite;
-    /* background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3, #FF0000); */
 }
 
+
 /* Link normali nel contenuto */
-.content a {
-    color: #5B6CFF;
+.content a{
+    color: #0F2A44 ; 
 }
 
 .content a:hover {
-    color: #8A95FF;
+    color: #2EC4B6;
 }
 
 .content2 a {
-    color: #7AA2FF;
+   color: #63CFC7;
 }
 
 .content2 a:hover {
-    color: #AFC0FF;
+    color: #9BE5DE; 
 }
 
 /* Link nella sidebar */
@@ -53,10 +53,6 @@ body {
     text-decoration: none;
 }
 
-a:hover {
-    color: #8F24F2;
-}
-
 li {
     list-style: disc;
     margin-left: 15px;
@@ -65,38 +61,46 @@ li {
     font-weight: bold;
     justify-items: center;
     align-items: center;
+    text-align: left;
+
 }
 
-figure {
+.sectionlight {
+    background-color: #EDE2DA;
+    color: #1F1F24;
+}
+
+.sectiondark {
+    background-color: #2A160A;
+    color: #F2EDE9;
+}
+
+.figure {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
 
-hr {
+.content hr {
     height: 7px;
     margin: 50px;
-    color: #51025f;
-    background-color: #51025f;
+    color: #2A160A;
+    background-color: #2A160A;
 }
 
-.sectionlight {
-    background-color: #E6E6EB;
-    color: #1F1F24;
+.content2 hr {
+    height: 7px;
+    margin: 50px;
+    color: #EDE2DA;
+    background-color: #EDE2DA;
 }
-
-.sectiondark {
-    background-color: #1E1B2E;
-    color: #F2F2F7;
-}
-
 /* =========================================
    2. HEADER
    ========================================= */
 .header {
     display: flex;
-    background-color: #390F61;
+    background-color: #5A2E0F;
     color: #fff;
     padding: 20px 10px;
     align-items: center;
@@ -127,126 +131,14 @@ hr {
 }
 
 /* =========================================
-   SPECIALE. TEMA CHIARO/SCURO
-   ========================================= */
-.theme-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: #440085;
-    width: 60px;
-    height: 60px;
-}
-
-.theme-icon button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-}
-
-.dark-mode .header {
-    background-color: #222;
-    color: #fff;
-}
-
-
-.theme-icon img {
-    cursor: pointer;
-}
-
-.theme-icon img:last-child {
-    display: none;
-}
-
-.dark-mode .theme-icon img:first-child {
-    display: none;
-}
-
-.dark-mode .theme-icon img:last-child {
-    display: block;
-}
-
-.dark-mode {
-    background: linear-gradient(270deg, #5A2E0F, #7A3F16, #D96A1A, #7A3F16, #5A2E0F);
-}
-
-.dark-mode body {
-    background: linear-gradient(270deg, #5A2E0F, #7A3F16, #D96A1A, #7A3F16, #5A2E0F);
-}
-
-.dark-mode .content a {
-    color: #0F2A44;
-}
-
-.dark-mode.content a:hover {
-    color: #2EC4B6;
-}
-
-.dark-mode .content2 a {
-    color: #63CFC7;
-}
-
-.dark-mode .content2 a:hover {
-    color: #9BE5DE;
-}
-
-.dark-mode .sectionlight {
-    background-color: #EDE2DA;
-    color: #1F1F24;
-}
-
-.dark-mode .sectiondark {
-    background-color: #2A160A;
-    color: #F2EDE9;
-}
-
-.dark-mode .content hr {
-    height: 7px;
-    margin: 50px;
-    color: #2A160A;
-    background-color: #2A160A;
-}
-
-.dark-mode .content2 hr {
-    height: 7px;
-    margin: 50px;
-    color: #EDE2DA;
-    background-color: #EDE2DA;
-}
-
-.dark-mode .header {
-    background-color: #5A2E0F;
-    color: #fff;
-}
-
-.dark-mode .content {
-    background-color: #EDE2DA;
-
-}
-
-.dark-mode .content2 {
-    background-color: #2A160A;
-}
-
-.dark-mode .sidebar {
-    background-color: #7A3F16;
-    color: linear-gradient(45deg, #5A2E0F, #7A3F16);
-}
-
-/* =========================================
    3. LAYOUT PRINCIPALE (GRID)
    ========================================= */
 .main-content {
     display: grid;
-    grid-template-columns: 1fr auto;
-    /* Contenuto a sinistra, Sidebar a destra */
+    grid-template-columns: 1fr auto; /* Contenuto a sinistra, Sidebar a destra */
     flex: 1;
     gap: 20px;
-    align-items: start;
-    /* Necessario per lo sticky */
+    align-items: start; /* Necessario per lo sticky */
 }
 
 /* =========================================
@@ -254,14 +146,12 @@ hr {
    ========================================= */
 .content {
     width: 100%;
-    background-color: #E6E6EB;
+    background-color: #EDE2DA;
     padding-right: 40px;
     padding-left: 20px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
+    gap: 40px; /* distanza tra blocchi */
     border-radius: 5px;
+
 
     display: flex;
     flex-direction: column;
@@ -272,13 +162,9 @@ hr {
 
 .content2 {
     width: 100%;
-    background-color: #1E1B2E;
-    padding-right: 40px;
-    padding-left: 20px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
+    background-color: #2A160A;
+    padding: 40px 40px 20px 20px; /* più spazio in alto/basso */
+    gap: 40px; /* distanza tra blocchi */
     border-radius: 5px;
 
 
@@ -289,36 +175,20 @@ hr {
     font-size: clamp(20px, 1.7vw, 40px);
 }
 
+
 /* --- Titoli H2 --- */
-.content h2 {
+.content h2, .content2 h2 {
     margin-top: 100px;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
-.content h2:first-child {
+.content h2, .content2:first-child {
     margin-top: 0;
 }
 
 /* --- Paragrafi --- */
-.content p {
-    width: 50%;
-}
-
-
-/* --- Titoli H2 --- */
-.content2 h2 {
-    margin-top: 100px;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.content2 h2:first-child {
-    margin-top: 0;
-}
-
-/* --- Paragrafi --- */
-.content2 p {
+.content p, .content2 p {
     width: 50%;
 }
 
@@ -344,8 +214,7 @@ hr {
     height: auto;
     padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.5);
-    /* Ombra per profondità */
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
 }
 
 .image2 {
@@ -353,16 +222,15 @@ hr {
     height: auto;
     padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.5);
-    /* Ombra per profondità */
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
 }
 
 /* =========================================
    5. SIDEBAR E MENU
    ========================================= */
 .sidebar {
-    background-color: #440085;
-    color: linear-gradient(45deg, #390F61, #440085);
+    background-color: #7A3F16;
+    color: linear-gradient(45deg, #7A3F16, #5A2E0F);
     padding: 30px 10px;
 
     display: flex;
@@ -374,8 +242,7 @@ hr {
     min-width: 60px;
     height: 100vh;
 
-    position: sticky;
-    /* Sidebar fissa mentre scorri */
+    position: sticky; /* Sidebar fissa mentre scorri */
     top: 0;
 }
 
@@ -460,7 +327,7 @@ hr {
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: #390F61;
+    background-color: #5A2E0F;
     box-shadow: 5px 5px 10px 2px #000000;
     color: #fff;
     text-align: center;
@@ -568,18 +435,16 @@ hr {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-    /* Larghezza della barra verticale */
-    height: 12px;
-    /* Altezza della barra orizzontale */
+  width: 12px;               /* Larghezza della barra verticale */
+  height: 12px;              /* Altezza della barra orizzontale */
 }
 
 /* Ora i tuoi stili verranno applicati */
 ::-webkit-scrollbar-track {
-    background: #390F61;
+  background: #5A2E0F; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #8F24F2;
-    border-radius: 10px;
+  background-color: #FF7F11;
+  border-radius: 10px;
 }
