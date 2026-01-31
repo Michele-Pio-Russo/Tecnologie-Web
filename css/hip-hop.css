@@ -152,12 +152,6 @@ figure {
     cursor: pointer;
 }
 
-.dark-mode .header {
-    background-color: #222;
-    color: #fff;
-}
-
-
 .theme-icon img {
     cursor: pointer;
 }
