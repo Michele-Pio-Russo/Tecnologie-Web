@@ -7,9 +7,13 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(270deg, #390F61, #440085, #8F24F2, #440085, #390F61);
+    background: linear-gradient(270deg, #5A2E0F, #7A3F16, #D96A1A, #7A3F16,     #5A2E0F);
     background-size: 200% 100%;
     animation: hoverEffect 3s ease-in-out infinite;
     color: #333;
@@ -19,9 +23,34 @@ body {
     min-height: 100vh;
 }
 
-a {
-    text-decoration: none;
+
+/* Link normali nel contenuto */
+.content a{
+    color: #0F2A44 ; 
+}
+
+.content a:hover {
+    color: #2EC4B6;
+}
+
+.content2 a {
+   color: #63CFC7;
+}
+
+.content2 a:hover {
+    color: #9BE5DE; 
+}
+
+/* Link nella sidebar */
+.sidebar a {
     color: #F2F6F3;
+    text-decoration: none;
+}
+
+/* Link nel footer */
+.footer a {
+    color: #F2F6F3;
+    text-decoration: none;
 }
 
 li {
@@ -32,14 +61,46 @@ li {
     font-weight: bold;
     justify-items: center;
     align-items: center;
+    text-align: left;
+
 }
 
+.sectionlight {
+    background-color: #EDE2DA;
+    color: #1F1F24;
+}
+
+.sectiondark {
+    background-color: #2A160A;
+    color: #F2EDE9;
+}
+
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.content hr {
+    height: 7px;
+    margin: 50px;
+    color: #2A160A;
+    background-color: #2A160A;
+}
+
+.content2 hr {
+    height: 7px;
+    margin: 50px;
+    color: #EDE2DA;
+    background-color: #EDE2DA;
+}
 /* =========================================
    2. HEADER
    ========================================= */
 .header {
     display: flex;
-    background-color: #390F61;
+    background-color: #5A2E0F;
     color: #fff;
     padding: 20px 10px;
     align-items: center;
@@ -74,12 +135,10 @@ li {
    ========================================= */
 .main-content {
     display: grid;
-    grid-template-columns: 1fr auto;
-    /* Contenuto a sinistra, Sidebar a destra */
+    grid-template-columns: 1fr auto; /* Contenuto a sinistra, Sidebar a destra */
     flex: 1;
     gap: 20px;
-    align-items: start;
-    /* Necessario per lo sticky */
+    align-items: start; /* Necessario per lo sticky */
 }
 
 /* =========================================
@@ -87,76 +146,91 @@ li {
    ========================================= */
 .content {
     width: 100%;
-    background-color: #E6E6EB;
-    padding: 40px;
+    background-color: #EDE2DA;
+    padding-right: 40px;
+    padding-left: 20px;
+    gap: 40px; /* distanza tra blocchi */
     border-radius: 5px;
+
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    /* Font size reattivo */
     font-size: clamp(20px, 1.7vw, 40px);
 }
 
+.content2 {
+    width: 100%;
+    background-color: #2A160A;
+    padding: 40px 40px 20px 20px; /* più spazio in alto/basso */
+    gap: 40px; /* distanza tra blocchi */
+    border-radius: 5px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: clamp(20px, 1.7vw, 40px);
+}
+
+
 /* --- Titoli H2 --- */
-.content h2 {
+.content h2, .content2 h2 {
     margin-top: 100px;
-    /* Spazio abbondante sopra ogni nuova sezione */
     margin-bottom: 20px;
-    /* Piccolo spazio sotto il titolo */
     line-height: 1.2;
 }
 
-.content h2:first-child {
+.content h2, .content2:first-child {
     margin-top: 0;
-    /* Il primo titolo non ha bisogno di spazio sopra */
 }
 
 /* --- Paragrafi --- */
-.content p {
+.content p, .content2 p {
     width: 50%;
-    /* Larghezza colonna testo */
 }
 
 /* --- Elementi (Blocchi Immagine + Testo) --- */
 .element1 {
     display: flex;
     align-items: center;
-    /* Centra verticalmente testo e immagine */
     justify-content: space-between;
     flex-direction: row-reverse;
-    /* Immagine a DX, Testo a SX */
 }
 
 .element2 {
     display: flex;
     align-items: center;
-    /* Centra verticalmente testo e immagine */
     justify-content: space-between;
     text-align: right;
-    /* Testo allineato a destra */
     margin-bottom: 0;
-    /* Corretto errore (era 'px') */
 }
 
 /* --- Immagini Articoli --- */
-.image1,
-.image2 {
+.image1 {
     width: clamp(100px, 25vw, 100%);
     height: auto;
     padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.5);
-    /* Ombra per profondità */
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
+}
+
+.image2 {
+    width: clamp(100px, 35vw, 100%);
+    height: auto;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
 }
 
 /* =========================================
    5. SIDEBAR E MENU
    ========================================= */
 .sidebar {
-    background-color: #440085;
-    color: linear-gradient(45deg, #390F61, #440085);
+    background-color: #7A3F16;
+    color: linear-gradient(45deg, #7A3F16, #5A2E0F);
     padding: 30px 10px;
 
     display: flex;
@@ -168,8 +242,7 @@ li {
     min-width: 60px;
     height: 100vh;
 
-    position: sticky;
-    /* Sidebar fissa mentre scorri */
+    position: sticky; /* Sidebar fissa mentre scorri */
     top: 0;
 }
 
@@ -254,13 +327,14 @@ li {
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: #390F61;
+    background-color: #5A2E0F;
     box-shadow: 5px 5px 10px 2px #000000;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     align-items: center;
     justify-content: center;
+    margin-top: auto;
 }
 
 .footer p {
@@ -367,10 +441,10 @@ li {
 
 /* Ora i tuoi stili verranno applicati */
 ::-webkit-scrollbar-track {
-  background: #390F61; 
+  background: #5A2E0F; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #8F24F2;
+  background-color: #FF7F11;
   border-radius: 10px;
 }

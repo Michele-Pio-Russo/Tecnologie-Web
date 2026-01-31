@@ -25,20 +25,20 @@ body {
 
 
 /* Link normali nel contenuto */
-.content a{
-    color: #390F61 ; /* o il colore che vuoi */
+.content a {
+    color: #5B6CFF;
 }
 
 .content a:hover {
-    color: #7185a8; /* o il colore che vuoi */
+    color: #8A95FF;
 }
 
 .content2 a {
-   color: #8F24F2; /* o il colore che vuoi */
+    color: #7AA2FF;
 }
 
 .content2 a:hover {
-    color: #ff84ff; /* o il colore che vuoi */
+    color: #AFC0FF;
 }
 
 /* Link nella sidebar */
@@ -82,12 +82,20 @@ figure {
     gap: 15px;
 }
 
-hr {
+.content hr {
     height: 7px;
     margin: 50px;
     color: #51025f;
     background-color: #51025f;
 }
+
+.content2 hr {
+    height: 7px;
+    margin: 50px;
+    color: #E6E6EB;
+    background-color: #E6E6EB ;
+}
+
 /* =========================================
    2. HEADER
    ========================================= */
@@ -128,10 +136,12 @@ hr {
    ========================================= */
 .main-content {
     display: grid;
-    grid-template-columns: 1fr auto; /* Contenuto a sinistra, Sidebar a destra */
+    grid-template-columns: 1fr auto;
+    /* Contenuto a sinistra, Sidebar a destra */
     flex: 1;
     gap: 20px;
-    align-items: start; /* Necessario per lo sticky */
+    align-items: start;
+    /* Necessario per lo sticky */
 }
 
 /* =========================================
@@ -142,7 +152,8 @@ hr {
     background-color: #E6E6EB;
     padding-right: 40px;
     padding-left: 20px;
-    gap: 40px; /* distanza tra blocchi */
+    gap: 40px;
+    /* distanza tra blocchi */
     border-radius: 5px;
 
 
@@ -156,8 +167,10 @@ hr {
 .content2 {
     width: 100%;
     background-color: #1E1B2E;
-    padding: 40px 40px 20px 20px; /* più spazio in alto/basso */
-    gap: 40px; /* distanza tra blocchi */
+    padding: 40px 40px 20px 20px;
+    /* più spazio in alto/basso */
+    gap: 40px;
+    /* distanza tra blocchi */
     border-radius: 5px;
 
 
@@ -170,18 +183,21 @@ hr {
 
 
 /* --- Titoli H2 --- */
-.content h2, .content2 h2 {
+.content h2,
+.content2 h2 {
     margin-top: 100px;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
-.content h2, .content2:first-child {
+.content h2,
+.content2:first-child {
     margin-top: 0;
 }
 
 /* --- Paragrafi --- */
-.content p, .content2 p {
+.content p,
+.content2 p {
     width: 50%;
 }
 
@@ -207,7 +223,8 @@ hr {
     height: auto;
     padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
+    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.5);
+    /* Ombra per profondità */
 }
 
 .image2 {
@@ -215,7 +232,8 @@ hr {
     height: auto;
     padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
+    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.5);
+    /* Ombra per profondità */
 }
 
 /* =========================================
@@ -235,7 +253,8 @@ hr {
     min-width: 60px;
     height: 100vh;
 
-    position: sticky; /* Sidebar fissa mentre scorri */
+    position: sticky;
+    /* Sidebar fissa mentre scorri */
     top: 0;
 }
 
@@ -428,16 +447,18 @@ hr {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;               /* Larghezza della barra verticale */
-  height: 12px;              /* Altezza della barra orizzontale */
+    width: 12px;
+    /* Larghezza della barra verticale */
+    height: 12px;
+    /* Altezza della barra orizzontale */
 }
 
 /* Ora i tuoi stili verranno applicati */
 ::-webkit-scrollbar-track {
-  background: #390F61; 
+    background: #390F61;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #8F24F2;
-  border-radius: 10px;
+    background-color: #8F24F2;
+    border-radius: 10px;
 }

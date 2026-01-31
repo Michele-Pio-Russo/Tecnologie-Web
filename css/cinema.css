@@ -26,19 +26,19 @@ body {
 
 /* Link normali nel contenuto */
 .content a{
-    color: #390F61 ; /* o il colore che vuoi */
+    color: #5B6CFF ; 
 }
 
 .content a:hover {
-    color: #7185a8; /* o il colore che vuoi */
+    color: #8A95FF;
 }
 
 .content2 a {
-   color: #8F24F2; /* o il colore che vuoi */
+   color: #7AA2FF;
 }
 
 .content2 a:hover {
-    color: #ff84ff; /* o il colore che vuoi */
+    color: #AFC0FF; 
 }
 
 /* Link nella sidebar */
