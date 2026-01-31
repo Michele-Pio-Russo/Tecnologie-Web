@@ -97,6 +97,7 @@ hr {
     width: 60px;
     height: 60px;
 }
+
 .theme-icon button {
     background: none;
     border: none;
@@ -104,6 +105,7 @@ hr {
     margin: 0;
     cursor: pointer;
 }
+
 .dark-mode .header {
     background-color: #222;
     color: #fff;
@@ -113,14 +115,52 @@ hr {
 .theme-icon img {
     cursor: pointer;
 }
+
 .theme-icon img:last-child {
     display: none;
 }
+
 .dark-mode .theme-icon img:first-child {
     display: none;
 }
+
 .dark-mode .theme-icon img:last-child {
     display: block;
+}
+
+.dark-mode {
+    background: linear-gradient(270deg, #5A2E0F, #7A3F16, #D96A1A, #7A3F16, #5A2E0F);
+}
+
+.dark-mode body {
+    background: linear-gradient(270deg, #5A2E0F, #7A3F16, #D96A1A, #7A3F16, #5A2E0F);
+}
+
+.dark-mode .content hr {
+    height: 7px;
+    margin: 50px;
+    color: #2A160A;
+    background-color: #2A160A;
+}
+
+.dark-mode .header {
+    background-color: #5A2E0F;
+    color: #fff;
+}
+
+.dark-mode .content {
+    background-color: #EDE2DA;
+
+}
+
+.dark-mode .sidebar {
+    background-color: #7A3F16;
+    color: linear-gradient(45deg, #5A2E0F, #7A3F16);
+}
+
+.dark-mode .footer {
+    background-color: #5A2E0F;
+    color: #fff;
 }
 
 
