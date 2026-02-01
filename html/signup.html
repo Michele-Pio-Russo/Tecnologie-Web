@@ -5,8 +5,8 @@
     <link rel="icon" href="../../imgs/Home/homeIcon.ico" type="image/x-icon">
     <meta name="description" content="Pagina di registrazione per nuovi utenti">
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../../css/log.css" />
-    <script type="text/javascript" src="../../js/sign.js" defer></script>
+    <link rel="stylesheet" href="/css/log.css" />
+    <script type="text/javascript" src="/js/sign.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -21,8 +21,8 @@
                     <img src="/imgs/Tema/dark_mode.png" alt="Immagine Tema Scuro"/>
                 </button>
         </div>
-            <a href="/html/home.html" title="Vai alla pagina principale">
-            <img src="../../imgs/Home/Icone/icons8-home-100.png"
+            <a href="home.html" title="Vai alla pagina principale">
+            <img src="../imgs/Home/Icone/icons8-home-100.png"
                 alt="Immagine Home" class="home-icon" /></a>
         </div>
     </div>
@@ -31,15 +31,15 @@
         <form action="../php/signup.php" method="POST" name="signup-form" onsubmit="return valida(this)">
             <div class="input">
                 <input type="text" id="nome" name="nome" placeholder="Username" onchange="verifica(this)">
-                <img src="../../imgs/Login/person.png" alt="email">
+                <img src="/imgs/Login/person.png" alt="email">
             </div>
             <div class="input">
                 <input type="email" id="email" name="email" placeholder="Email" >
-                <img src="../../imgs/Login/mail.png" alt="email">
+                <img src="../imgs/Login/mail.png" alt="email">
             </div>
             <div class="input">
                 <input type="password" id="password" name="password" placeholder="Password" >
-                <img src="../../imgs/Login/key.png" alt="password">
+                <img src="../imgs/Login/key.png" alt="password">
             </div>  
             <button type="submit">Registrati</button>
             <div class="question">

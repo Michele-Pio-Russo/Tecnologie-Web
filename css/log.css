@@ -3,12 +3,12 @@
    ========================================= */
 :root
 {
-    --sfondo: url('../../imgs/Login/scuro.jpg');
+    --sfondo: url('../imgs/Login/scuro.jpg');
     --colore-bottone:#440085;
     --colore-link:#8A95FF ;
     --colore-link-hover:#E6E6EB;
     --colore-testo: white;
-    --immagine-logo: url('/imgs/Logo/LogoViola.png');
+    --immagine-logo: url('../imgs/Logo/LogoViola.png');
 }
 * {
     margin: 0;
@@ -210,12 +210,12 @@ form a:hover {
 .dark-mode
 {
     --immagine-logo: url('/imgs/Logo/LogoArancione.png');
-    --sfondo: url('../../imgs/Login/chiaro.jpg');
+    --sfondo: url('/imgs/Login/chiaro.jpg');
     --colore-bottone:#7A3F16;
     --colore-link:#26998d ;
     --colore-link-hover:#494949;
     --colore-testo: white;
-    --immagine-logo: url('../../imgs/Logo/LogoArancione.png');
+    --immagine-logo: url('../imgs/Logo/LogoArancione.png');
     .login-form button:hover {
     background-color: #ad5b20;
 }
