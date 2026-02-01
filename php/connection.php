@@ -1,7 +1,7 @@
 <?php
 $host = '172.16.239.10';
 $port = '5432';
-$db = 'tsw';
+$db = 'TecnologieWeb';
 $username = 'admin';
 $password = '1234';
 
