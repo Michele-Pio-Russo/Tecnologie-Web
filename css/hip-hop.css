@@ -4,13 +4,13 @@
 :root {
     --scrollbar-track: #390F61;
     --scrollbar-thumb: #8F24F2;
-    --immagine-logo: url('/imgs/Logo/LogoViola.png');   
+    --immagine-logo: url('../imgs/Logo/LogoViola.png');   
 }
 
 .dark-mode {
     --scrollbar-track: #5A2E0F;
     --scrollbar-thumb: #FF7F11;
-    --immagine-logo: url('/imgs/Logo/LogoArancione.png');
+    --immagine-logo: url('../imgs/Logo/LogoArancione.png');
 }
    * {
     margin: 0;
