@@ -5,8 +5,8 @@
     <link rel="icon" href="../../imgs/Home/homeIcon.ico" type="image/x-icon">
     <meta name="description" content="Pagina di registrazione per nuovi utenti">
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/css/log.css" />
-    <script type="text/javascript" src="/js/sign.js" defer></script>
+    <link rel="stylesheet" href="../css/log.css" />
+    <script type="text/javascript" src="../js/sign.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -17,8 +17,8 @@
         <div class="login">
             <div class="theme-icon" title="Cambia al tema Scuro">
                 <button id="theme-button">
-                    <img src="/imgs/Tema/light_mode.png" alt="Immagine Tema Chiaro"/>
-                    <img src="/imgs/Tema/dark_mode.png" alt="Immagine Tema Scuro"/>
+                    <img src="../imgs/Tema/light_mode.png" alt="Immagine Tema Chiaro"/>
+                    <img src="../imgs/Tema/dark_mode.png" alt="Immagine Tema Scuro"/>
                 </button>
         </div>
             <a href="home.html" title="Vai alla pagina principale">
@@ -31,7 +31,7 @@
         <form action="../php/signup.php" method="POST" name="signup-form" onsubmit="return valida(this)">
             <div class="input">
                 <input type="text" id="nome" name="nome" placeholder="Username" onchange="verifica(this)">
-                <img src="/imgs/Login/person.png" alt="email">
+                <img src="../imgs/Login/person.png" alt="email">
             </div>
             <div class="input">
                 <input type="email" id="email" name="email" placeholder="Email" >
