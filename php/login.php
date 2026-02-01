@@ -6,7 +6,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT password, username FROM Account WHERE email=$1;";
+    $sql = "SELECT password, username FROM utente WHERE email=$1;";
     $prep = pg_prepare($db, "checkLogin", $sql); 
     $ret = pg_execute($db, "checkLogin", array($email));
 
@@ -18,7 +18,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             $_SESSION['autorizzato'] = true;
             $_SESSION['nome_utente'] = $username; 
 
-            header("Location: home.php"); 
+            header("Location: ../html/home.php"); 
             exit;
         } else {
             $errore = "Password errata. <a href='login.html'>Riprova</a>";
