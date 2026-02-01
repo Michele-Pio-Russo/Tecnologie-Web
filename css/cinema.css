@@ -362,6 +362,13 @@ hr {
     margin-bottom: 0;
 }
 
+.element3 {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: 100%;
+}
+
 /* --- Immagini Articoli --- */
 .image1 {
     width: clamp(100px, 25vw, 100%);

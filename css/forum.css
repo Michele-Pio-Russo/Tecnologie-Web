@@ -4,22 +4,19 @@
 :root {
     --scrollbar-track: #390F61;
     --scrollbar-thumb: #8F24F2;
-    --immagine-logo: url('../imgs/Logo/LogoViola.png');   
+    --immagine-logo: url('/imgs/Logo/LogoViola.png');   
 }
 
 .dark-mode {
     --scrollbar-track: #5A2E0F;
     --scrollbar-thumb: #FF7F11;
-    --immagine-logo: url('../imgs/Logo/LogoArancione.png');
+    --immagine-logo: url('/imgs/Logo/LogoArancione.png');
 }
+
    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    height: 100%;
 }
 
 body {
@@ -34,33 +31,9 @@ body {
 }
 
 
-/* Link normali nel contenuto */
-.content a {
-    color: #5B6CFF;
-}
-
-.content a:hover {
-    color: #8A95FF;
-}
-
-.content2 a {
-    color: #7AA2FF;
-}
-
-.content2 a:hover {
-    color: #AFC0FF;
-}
-
-/* Link nella sidebar */
-.sidebar a {
-    color: #F2F6F3;
+a {
     text-decoration: none;
-}
-
-/* Link nel footer */
-.footer a {
     color: #F2F6F3;
-    text-decoration: none;
 }
 
 li {
@@ -72,18 +45,9 @@ li {
     justify-items: center;
     align-items: center;
     text-align: left;
-
+    font-size: clamp(20px, 1.7vw, 40px);
 }
 
-.sectionlight {
-    background-color: #E6E6EB;
-    color: #1F1F24;
-}
-
-.sectiondark {
-    background-color: #1E1B2E;
-    color: #F2F2F7;
-}
 
 figure {
     display: flex;
@@ -92,24 +56,18 @@ figure {
     gap: 15px;
 }
 
-.content hr {
+hr {
     height: 7px;
     margin: 50px;
     color: #51025f;
     background-color: #51025f;
 }
 
-.content2 hr {
-    height: 7px;
-    margin: 50px;
-    color: #E6E6EB;
-    background-color: #E6E6EB;
-}
-
 /* =========================================
    2. HEADER
    ========================================= */
 .header {
+    width: 100%;
     display: flex;
     background-color: #390F61;
     color: #fff;
@@ -139,14 +97,12 @@ figure {
     display: inline-block;
     /* transition: background-image 0.3s linear; */
 }
-
 .login {
     display: flex;
     align-items: center;
     gap: 20px;
     padding-right: 20px;
 }
-
 .login-icon {
     width: 40px;
     height: 40px;
@@ -156,7 +112,6 @@ figure {
 .login-icon:hover {
     transform: scale(1.1);
 }
-
 /* =========================================
    SPECIALE. TEMA CHIARO/SCURO
    ========================================= */
@@ -178,6 +133,8 @@ figure {
     cursor: pointer;
 }
 
+
+
 .theme-icon img {
     cursor: pointer;
 }
@@ -198,44 +155,11 @@ figure {
     background-color: #5A2E0F;
 }
 
-.dark-mode .content a {
-    color: #0F2A44;
-}
-
-.dark-mode.content a:hover {
-    color: #2EC4B6;
-}
-
-.dark-mode .content2 a {
-    color: #63CFC7;
-}
-
-.dark-mode .content2 a:hover {
-    color: #9BE5DE;
-}
-
-.dark-mode .sectionlight {
-    background-color: #EDE2DA;
-    color: #1F1F24;
-}
-
-.dark-mode .sectiondark {
-    background-color: #2A160A;
-    color: #F2EDE9;
-}
-
 .dark-mode .content hr {
     height: 7px;
     margin: 50px;
     color: #2A160A;
     background-color: #2A160A;
-}
-
-.dark-mode .content2 hr {
-    height: 7px;
-    margin: 50px;
-    color: #EDE2DA;
-    background-color: #EDE2DA;
 }
 
 .dark-mode .header {
@@ -246,10 +170,6 @@ figure {
 .dark-mode .content {
     background-color: #EDE2DA;
 
-}
-
-.dark-mode .content2 {
-    background-color: #2A160A;
 }
 
 .dark-mode .sidebar {
@@ -266,17 +186,22 @@ figure {
     background-color: #7A3F16;
 }
 
+.dark-mode .tabella th {
+    background-color: #783403;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: clamp(20px, 1vw, 40px);
+}
 /* =========================================
    3. LAYOUT PRINCIPALE (GRID)
    ========================================= */
 .main-content {
     display: grid;
-    grid-template-columns: 1fr auto;
-    /* Contenuto a sinistra, Sidebar a destra */
+    grid-template-columns: 1fr auto; /* Contenuto a sinistra, Sidebar a destra */
     flex: 1;
     gap: 20px;
-    align-items: start;
-    /* Necessario per lo sticky */
+    align-items: start; /* Necessario per lo sticky */
 }
 
 /* =========================================
@@ -285,79 +210,47 @@ figure {
 .content {
     width: 100%;
     background-color: #E6E6EB;
-    padding-right: 40px;
-    padding-left: 20px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    gap: 40px;
-    /* distanza tra blocchi */
+    padding: 40px;
     border-radius: 5px;
-
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    
+    /* Font size reattivo */
     font-size: clamp(20px, 1.7vw, 40px);
 }
-
-.content2 {
-    width: 100%;
-    background-color: #1E1B2E;
-    padding: 40px 40px 20px 20px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    /* più spazio in alto/basso */
-    gap: 40px;
-    /* distanza tra blocchi */
-    border-radius: 5px;
-
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    font-size: clamp(20px, 1.7vw, 40px);
-}
-
 
 /* --- Titoli H2 --- */
-.content h2,
-.content2 h2 {
-    margin-top: 100px;
-    margin-bottom: 20px;
+.content h2 {
+    margin-top: 100px;   /* Spazio abbondante sopra ogni nuova sezione */
+    margin-bottom: 20px; /* Piccolo spazio sotto il titolo */
     line-height: 1.2;
 }
 
-.content h2,
-.content2:first-child {
-    margin-top: 0;
+.content h2:first-child {
+    margin-top: 0; /* Il primo titolo non ha bisogno di spazio sopra */
 }
 
 /* --- Paragrafi --- */
-.content p,
-.content2 p {
-    width: 50%;
+.content p {
+    width: 50%; /* Larghezza colonna testo */
 }
 
 /* --- Elementi (Blocchi Immagine + Testo) --- */
 .element1 {
     display: flex;
-    align-items: center;
+    align-items: center; /* Centra verticalmente testo e immagine */
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Immagine a DX, Testo a SX */
 }
 
 .element2 {
     display: flex;
-    align-items: center;
+    align-items: center; /* Centra verticalmente testo e immagine */
     justify-content: space-between;
-    text-align: right;
-    margin-bottom: 0;
+    text-align: right;   /* Testo allineato a destra */
+    margin-bottom: 0;    /* Corretto errore (era 'px') */
 }
 
 .element3 {
@@ -367,14 +260,47 @@ figure {
     width: 100%;
 }
 
+/* --- Tabella --- */
+.tabella {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tabella th {
+    background-color: #39006e;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: clamp(20px, 1vw, 40px);
+}
+
+.tabella td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+    color: #444;
+    font-size: clamp(20px, 1vw, 40px);
+    text-align: center;
+}
+
+.tabella-rivoluzioni tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.tabella-rivoluzioni tr:hover {
+    background-color: #d1ecf1; 
+    transition: 0.3s; 
+}
+
 /* --- Immagini Articoli --- */
 .image1 {
     width: clamp(100px, 25vw, 100%);
     height: auto;
     padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.5);
-    /* Ombra per profondità */
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
 }
 
 .image2 {
@@ -382,8 +308,7 @@ figure {
     height: auto;
     padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.5);
-    /* Ombra per profondità */
+    box-shadow: 0 4px 8px rgba(1,1,1,0.5); /* Ombra per profondità */
 }
 
 /* =========================================
@@ -403,20 +328,17 @@ figure {
     width: auto;
     min-width: 60px;
     height: 100vh;
-
-    position: sticky;
-    /* Sidebar fissa mentre scorri */
+    
+    position: sticky; /* Sidebar fissa mentre scorri */
     top: 0;
 }
 
 .sidebar:hover .menu {
-    width: 250px;
-    /* Espansione menu */
+    width: 250px; /* Espansione menu */
 }
 
 .sidebar:hover .menu a {
-    opacity: 1;
-    /* Mostra testo link */
+    opacity: 1; /* Mostra testo link */
 }
 
 /* --- Menu Container --- */
@@ -450,8 +372,7 @@ figure {
 
 /* --- Menu Links (Testo) --- */
 .menu .menu-itme a {
-    opacity: 0;
-    /* Nascosto di default */
+    opacity: 0; /* Nascosto di default */
 }
 
 .menu a {
@@ -464,10 +385,10 @@ figure {
     opacity: 0;
 
     transition: background-color 0.3s ease,
-        color 0.3s ease,
-        border-radius 1s ease,
-        font-size 1s ease,
-        opacity 0.3s linear;
+                color 0.3s ease,
+                border-radius 1s ease,
+                font-size 1s ease,
+                opacity 0.3s linear;
 }
 
 /* Hover sui Link (Effetto Arcobaleno) */
@@ -497,7 +418,6 @@ figure {
     padding: 10px 0;
     align-items: center;
     justify-content: center;
-    margin-top: auto;
 }
 
 .footer p {
@@ -539,25 +459,11 @@ figure {
 }
 
 /* Hover colori specifici Social */
-.whatsapp:hover a {
-    color: #25D366;
-}
-
-.instagram:hover a {
-    color: #E1306C;
-}
-
-.facebook:hover a {
-    color: #1877F2;
-}
-
-.telegram:hover a {
-    color: #24A1DE;
-}
-
-.discord:hover a {
-    color: #5865F2;
-}
+.whatsapp:hover a { color: #25D366; }
+.instagram:hover a { color: #E1306C; }
+.facebook:hover a { color: #1877F2; }
+.telegram:hover a { color: #24A1DE; }
+.discord:hover a { color: #5865F2; }
 
 /* =========================================
    7. ANIMAZIONI (KEYFRAMES)
@@ -567,7 +473,6 @@ figure {
         width: 0;
         opacity: 0;
     }
-
     to {
         width: 100%;
         opacity: 1;
@@ -575,17 +480,9 @@ figure {
 }
 
 @keyframes hoverEffect {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* =========================================
@@ -598,10 +495,8 @@ figure {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-    /* Larghezza della barra verticale */
-    height: 12px;
-    /* Altezza della barra orizzontale */
+  width: 12px;               /* Larghezza della barra verticale */
+  height: 12px;              /* Altezza della barra orizzontale */
 }
 
 /* Ora i tuoi stili verranno applicati */

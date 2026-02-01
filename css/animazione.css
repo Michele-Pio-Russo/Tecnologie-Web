@@ -44,6 +44,13 @@ li {
     align-items: center;
 }
 
+hr {
+    height: 7px;
+    margin: 50px;
+    color: #51025f;
+    background-color: #51025f;
+}
+
 /* =========================================
    2. HEADER
    ========================================= */
@@ -158,6 +165,12 @@ li {
     color: #fff;
 }
 
+.dark-mode .content hr {
+    height: 7px;
+    margin: 50px;
+    color: #2A160A;
+    background-color: #2A160A;
+}
 
 .dark-mode .sidebar {
     background-color: #7A3F16;
@@ -236,6 +249,13 @@ li {
     /* Testo allineato a destra */
     margin-bottom: 0;
     /* Corretto errore (era 'px') */
+}
+
+.element3 {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: 100%;
 }
 
 /* --- Immagini Articoli --- */
