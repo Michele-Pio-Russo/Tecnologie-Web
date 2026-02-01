@@ -1,9 +1,9 @@
 <?php
 $host = '127.0.0.1';
 $port = '5432';
-$db = 'TecnologieWeb';
-$username = 'admin';
-$password = '1234';
+$db = 'gruppo38';
+$username = 'www';
+$password = 'www';
 
 $connection_string = "host=$host port=$port dbname=$db user=$username password=$password";
 
