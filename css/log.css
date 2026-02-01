@@ -209,8 +209,8 @@ form a:hover {
 }
 .dark-mode
 {
-    --immagine-logo: url('/imgs/Logo/LogoArancione.png');
-    --sfondo: url('/imgs/Login/chiaro.jpg');
+    --immagine-logo: url('../imgs/Logo/LogoArancione.png');
+    --sfondo: url('../imgs/Login/chiaro.jpg');
     --colore-bottone:#7A3F16;
     --colore-link:#26998d ;
     --colore-link-hover:#494949;
