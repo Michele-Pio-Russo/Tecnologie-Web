@@ -46,7 +46,7 @@ a = nome.split("@"); // restituisce un array splittato dalla @
 nomep = a[0];
 nomed = a[1];
 nomeInput.value = nomep+nomed;
- }
+}
 }
 
 themeToggleButton.addEventListener('click', () => {
