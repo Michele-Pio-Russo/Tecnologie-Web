@@ -1,4 +1,8 @@
-<html>
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="it"> 
     <head>
         <title>Tera ➔ Forum</title>
         <link rel="icon" href="..\..\imgs\Home\homeIcon.ico" type="image/x-icon">
@@ -9,6 +13,7 @@
     </head>
 
     <body>
+        <?php if (isset($_SESSION['autorizzato']) && $_SESSION['autorizzato'] === true): ?>
         <div class="header">
         <div class="logo">
             <div class="immagine-logo"></div>
@@ -121,6 +126,11 @@
             <p>© 2026 TERA. All rights reserved.</p>
         </div>
     </body>
+    <?php else: ?>
 
+    <h1>Accesso Negato</h1>
+    <p>Per favore, <a href="login.html">autenticati</a> per visualizzare questa pagina.</p>
+
+    <?php endif; ?>
 
 </html>
