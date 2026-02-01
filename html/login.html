@@ -6,7 +6,7 @@
     <meta name="description" content="Pagina di accesso per utenti registrati">
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../../css/log.css" />
-    <script type="text/javascript" src="../../js/index.js" defer></script>
+    <script type="text/javascript" src="../../js/log.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -16,26 +16,25 @@
         </div>
         <div class="login">
             <div class="theme-icon" title="Cambia al tema Scuro">
-            <button id="theme-button">
-                <img src="/imgs/Tema/light_mode.png" alt="Immagine Tema Chiaro" />
-                <img src="/imgs/Tema/dark_mode.png" alt="Immagine Tema Scuro" />
-            </button>
+                <button id="theme-button">
+                    <img src="/imgs/Tema/light_mode.png" alt="Immagine Tema Chiaro"/>
+                    <img src="/imgs/Tema/dark_mode.png" alt="Immagine Tema Scuro"/>
+                </button>
         </div>
-            <p>Login</p>
-            <a href="/html/login.html" title="Vai alla pagina di accesso">
-                <img src="/imgs/Home/login-logout-white-icon-11642597802btccm3uuci-removebg-preview.png"
-                    alt="Immagine Login" class="login-icon" /></a>
+            <a href="/html/home.html" title="Vai alla pagina principale">
+            <img src="../../imgs/Home/Icone/icons8-home-100.png"
+                alt="Immagine Home" class="home-icon" /></a>
         </div>
     </div>
     <div class="login-form">
         <h2>LOGIN</h2>
-        <form action="" method="POST">
+        <form action="" method="POST" name="login-form" onsubmit="return valida(this)">
             <div class="input">
-                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="email" id="email" name="email" placeholder="Email" >
                 <img src="../../imgs/Login/person.png" alt="email">
             </div>
             <div class="input">
-                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="password" name="password" placeholder="Password" >
                 <img src="../../imgs/Login/key.png" alt="password">
             </div>  
             <button type="submit">Accedi</button>

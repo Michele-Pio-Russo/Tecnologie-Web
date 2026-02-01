@@ -6,7 +6,7 @@
     <meta name="description" content="Pagina di registrazione per nuovi utenti">
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../../css/log.css" />
-    <script type="text/javascript" src="../../js/index.js" defer></script>
+    <script type="text/javascript" src="../../js/sign.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -28,13 +28,17 @@
     </div>
     <div class="login-form">
         <h2>SIGN UP</h2>
-        <form action="" method="POST">
+        <form action="" method="POST" name="signup-form" onsubmit="return valida(this)">
             <div class="input">
-                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="text" id="nome" name="nome" placeholder="Username" onchange="verifica(this)">
                 <img src="../../imgs/Login/person.png" alt="email">
             </div>
             <div class="input">
-                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="email" id="email" name="email" placeholder="Email" >
+                <img src="../../imgs/Login/mail.png" alt="email">
+            </div>
+            <div class="input">
+                <input type="password" id="password" name="password" placeholder="Password" >
                 <img src="../../imgs/Login/key.png" alt="password">
             </div>  
             <button type="submit">Registrati</button>
