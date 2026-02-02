@@ -5,6 +5,8 @@
     --scrollbar-track: #390F61;
     --scrollbar-thumb: #8F24F2;
     --immagine-logo: url('/imgs/Logo/LogoViola.png');   
+    --radio: #8F24F2;
+    --checkbox: #8F24F2;
 }
 
 .dark-mode {
@@ -62,6 +64,7 @@ hr {
     color: #51025f;
     background-color: #51025f;
 }
+
 
 /* =========================================
    2. HEADER
@@ -193,6 +196,14 @@ hr {
     text-transform: uppercase;
     font-size: clamp(20px, 1vw, 40px);
 }
+
+.dark-mode input[type="radio"] {
+    accent-color: #FF7F11;
+}
+
+.dark-mode input[type="checkbox"] {
+    accent-color: #FF7F11;
+}
 /* =========================================
    3. LAYOUT PRINCIPALE (GRID)
    ========================================= */
@@ -262,8 +273,19 @@ hr {
 
 .questionario {
     display: flex;
-    width: 100%;
+    width: 25%;
     justify-content: center;
+    padding-bottom: 20px;
+}
+
+input[type="radio"] {
+  width: 25px;
+  height: 25px;
+}
+
+input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
 }
 
 /* --- Tabella --- */
