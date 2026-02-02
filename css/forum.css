@@ -260,6 +260,12 @@ hr {
     width: 100%;
 }
 
+.questionario {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 /* --- Tabella --- */
 .tabella {
     width: 100%;
